@@ -1,0 +1,37 @@
+name: Track jobs
+
+on:
+  schedule:
+    - cron: "17 5 * * *"   # daily at 05:17 UTC = 08:17 Nairobi
+  workflow_dispatch:        # run manually from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch jobs and update data
+        run: python scripts/track_jobs.py
+
+      - name: Commit changes
+        env:
+          COMMIT_NAME: ${{ secrets.COMMIT_NAME }}
+          COMMIT_EMAIL: ${{ secrets.COMMIT_EMAIL }}
+        run: |
+          git config user.name  "$COMMIT_NAME"
+          git config user.email "$COMMIT_EMAIL"
+          git add data README.md
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "data: job snapshot $(date -u +%F)"
+            git push
+          fi
