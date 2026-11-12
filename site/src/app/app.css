@@ -36,6 +36,8 @@ h3 { margin: 0; font-size: 17px; line-height: 1.35; }
 .badge { font-size: 12px; font-weight: 600; padding: 3px 8px; border-radius: 999px; }
 .badge.kenya { background: var(--good-bg); color: var(--good-text); }
 .badge.restricted { background: var(--neutral-bg); color: var(--text-muted); }
+.badges { display: flex; gap: 6px; flex-shrink: 0; }
+.badge.role { background: var(--neutral-bg); color: var(--text); font-weight: 500; }
 .badge.new { background: var(--accent-bg); color: var(--accent-text); }
 .apply { align-self: flex-start; font-size: 14px; font-weight: 600; color: var(--accent-text); text-decoration: none; }
 .apply:hover { text-decoration: underline; }

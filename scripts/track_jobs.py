@@ -1,4 +1,4 @@
-"""Fetch remote Angular / TypeScript / frontend jobs from Remotive and update the tracker.
+"""Fetch remote software development jobs from Remotive, classify them by role, and update the tracker.
 
 Writes:
   data/jobs.csv         every job ever seen (deduplicated by id)
@@ -14,9 +14,18 @@ import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 
-SEARCH_TERMS = ["angular", "typescript", "frontend", "front end"]
-# A job is kept only if its title or tags mention one of these
-KEYWORDS = ["angular", "typescript", "frontend", "front-end", "front end", "javascript", "ui engineer"]
+# Role is decided from the job title, first match wins (order matters:
+# "Full-stack" before "Frontend", "React Native" before "React").
+ROLE_RULES = [
+    ("Full-stack", ["full stack", "full-stack", "fullstack"]),
+    ("Mobile", ["mobile", "ios", "android", "flutter", "react native", "kotlin", "swift"]),
+    ("Frontend", ["frontend", "front-end", "front end", "angular", "javascript", "typescript", "react", "vue", "ui engineer", "web developer"]),
+    ("DevOps & Cloud", ["devops", "sre", "site reliability", "platform", "infrastructure", "cloud", "kubernetes"]),
+    ("Data & AI", ["data", "machine learning", " ml ", "ai ", " ai", "llm", "analytics"]),
+    ("QA & Testing", ["qa", "quality", "test", "sdet"]),
+    ("Backend", ["backend", "back-end", "back end", "api", "python", "java", "golang", " go ", "ruby", "rails",
+                 "php", "laravel", "node", ".net", "c#", "scala", "elixir"]),
+]
 API = "https://remotive.com/api/remote-jobs"
 # Location strings that mean someone in Kenya can apply
 OPEN_TO_KENYA = ["worldwide", "anywhere", "africa", "kenya", "emea", "global"]
@@ -26,21 +35,22 @@ JOBS_CSV = os.path.join(ROOT, "data", "jobs.csv")
 STATS_CSV = os.path.join(ROOT, "data", "daily_stats.csv")
 README = os.path.join(ROOT, "README.md")
 JOB_FIELDS = ["id", "first_seen", "published", "title", "company", "location",
-              "open_to_kenya", "job_type", "salary", "url"]
+              "open_to_kenya", "role", "job_type", "salary", "url"]
 
 
-def fetch(term):
-    url = f"{API}?{urllib.parse.urlencode({'search': term, 'category': 'software-dev'})}"
+def fetch():
+    url = f"{API}?{urllib.parse.urlencode({'category': 'software-dev'})}"
     req = urllib.request.Request(url, headers={"User-Agent": "job-tracker (GitHub Actions)"})
     with urllib.request.urlopen(req, timeout=30) as r:
         return json.load(r).get("jobs", [])
 
 
-def relevant(job):
-    if job.get("category") != "Software Development":
-        return False
-    text = " ".join([job.get("title", "")] + list(job.get("tags") or [])).lower()
-    return any(k in text for k in KEYWORDS)
+def classify(title):
+    t = f" {title.lower()} "
+    for role, words in ROLE_RULES:
+        if any(w in t for w in words):
+            return role
+    return "General"
 
 
 def open_to_kenya(location):
@@ -79,21 +89,28 @@ def build_readme(jobs, stats, today):
 
     latest = sorted(jobs, key=lambda j: j["published"], reverse=True)[:20]
     rows = "\n".join(
-        f'| {j["published"][:10]} | [{md(j["title"])}]({j["url"]}) | {md(j["company"])} '
+        f'| {j["published"][:10]} | [{md(j["title"])}]({j["url"]}) | {j["role"]} | {md(j["company"])} '
         f'| {md(j["location"]) or "—"} | {"✅" if j["open_to_kenya"] == "yes" else ""} |'
         for j in latest
     )
 
-    return f"""# Remote Frontend Job Tracker
+    roles = {}
+    for j in jobs:
+        roles[j["role"]] = roles.get(j["role"], 0) + 1
+    role_line = " · ".join(f"{r}: {n}" for r, n in sorted(roles.items(), key=lambda x: -x[1]))
 
-Tracks remote **Angular, TypeScript and frontend** roles every day and flags the ones open to
-candidates in Kenya. A GitHub Actions workflow runs a Python script on a schedule, fetches listings
+    return f"""# Remote Software Job Tracker
+
+Tracks remote **software development** jobs every day, sorts them by role (frontend, backend,
+full-stack, mobile and more), and flags the ones open to candidates in Kenya. A GitHub Actions workflow runs a Python script on a schedule, fetches listings
 from the [Remotive](https://remotive.com) public API, deduplicates them, and commits the updated data.
 
 **Live site:** https://mwangimark.github.io/frontend-job-tracker/ (Angular app in `site/`, redeployed after every update)
 
 **Last updated:** {today} · **Jobs tracked:** {total} · **Open to Kenya:** {kenya} ·
 **New today:** {today_row["new_jobs"]} ({today_row["new_open_to_kenya"]} open to Kenya)
+
+**By role:** {role_line}
 
 ## New jobs per day (last 30 days)
 
@@ -108,14 +125,14 @@ Bars: all new jobs. Line: new jobs open to Kenya.
 
 ## Latest 20 jobs
 
-| Published | Role | Company | Location | Open to Kenya |
-|---|---|---|---|---|
+| Published | Job | Role | Company | Location | Open to Kenya |
+|---|---|---|---|---|---|
 {rows}
 
 ## How it works
 
 - `.github/workflows/track-jobs.yml` runs daily at 08:17 EAT (and on demand).
-- `scripts/track_jobs.py` queries the API for each search term, merges results into
+- `scripts/track_jobs.py` fetches the software development category, classifies each job's role from its title, merges new jobs into
   `data/jobs.csv`, appends a row to `data/daily_stats.csv`, and regenerates this README.
 - Only Python's standard library is used, so the workflow needs no dependencies.
 - `.github/workflows/deploy-site.yml` rebuilds the Angular site in `site/` with the new data
@@ -130,17 +147,15 @@ def main():
     jobs = read_csv(JOBS_CSV)
     seen = {j["id"] for j in jobs}
 
-    fetched, errors = {}, 0
-    for term in SEARCH_TERMS:
-        try:
-            for job in fetch(term):
-                if relevant(job):
-                    fetched[str(job["id"])] = job
-        except Exception as e:  # keep going if one search fails
-            errors += 1
-            print(f"Search '{term}' failed: {e}", file=sys.stderr)
-    if errors == len(SEARCH_TERMS):
-        sys.exit("All searches failed; nothing updated.")
+    for j in jobs:  # rows saved before roles existed
+        if not j.get("role"):
+            j["role"] = classify(j["title"])
+
+    try:
+        fetched = {str(job["id"]): job for job in fetch()
+                   if job.get("category") == "Software Development"}
+    except Exception as e:
+        sys.exit(f"Fetching jobs failed; nothing updated. {e}")
 
     new = []
     for jid, job in fetched.items():
@@ -155,6 +170,7 @@ def main():
             "company": job.get("company_name", ""),
             "location": loc,
             "open_to_kenya": "yes" if open_to_kenya(loc) else "no",
+            "role": classify(job.get("title", "")),
             "job_type": job.get("job_type", ""),
             "salary": job.get("salary", ""),
             "url": job.get("url", ""),

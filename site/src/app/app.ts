@@ -11,9 +11,9 @@ type SortKey = 'newest' | 'company';
     <header class="top">
       <div class="wrap top-inner">
         <div>
-          <h1>Remote Frontend Jobs</h1>
-          <p class="sub">Remote Angular, TypeScript and frontend roles, updated every morning.
-            Roles open to candidates in Kenya are marked.</p>
+          <h1>Remote Software Jobs</h1>
+          <p class="sub">Remote software development jobs (frontend, backend, full-stack, mobile and more),
+            updated every morning. Roles open to candidates in Kenya are marked.</p>
         </div>
         <a class="gh" href="https://github.com/Mwangimark/frontend-job-tracker" target="_blank" rel="noopener">View on GitHub</a>
       </div>
@@ -37,6 +37,10 @@ type SortKey = 'newest' | 'company';
         <section class="filters" aria-label="Filters">
           <input type="search" placeholder="Search role, company or location" [value]="query()"
                  (input)="query.set($any($event.target).value)" aria-label="Search jobs" />
+          <select [value]="role()" (change)="role.set($any($event.target).value)" aria-label="Role">
+            <option value="">All roles</option>
+            @for (r of roles(); track r.name) { <option [value]="r.name">{{ r.name }} ({{ r.count }})</option> }
+          </select>
           <select [value]="jobType()" (change)="jobType.set($any($event.target).value)" aria-label="Job type">
             <option value="">All job types</option>
             @for (t of jobTypes(); track t) { <option [value]="t">{{ typeLabel(t) }}</option> }
@@ -59,7 +63,10 @@ type SortKey = 'newest' | 'company';
               <article class="card">
                 <div class="card-head">
                   <span class="company">{{ j.company }}</span>
-                  @if (isNew(j)) { <span class="badge new">New</span> }
+                  <span class="badges">
+                    <span class="badge role">{{ j.role }}</span>
+                    @if (isNew(j)) { <span class="badge new">New</span> }
+                  </span>
                 </div>
                 <h3>{{ j.title }}</h3>
                 <div class="meta">
@@ -100,6 +107,7 @@ export class App implements OnInit {
 
   readonly query = signal('');
   readonly jobType = signal('');
+  readonly role = signal('');
   readonly kenyaOnly = signal(false);
   readonly sort = signal<SortKey>('newest');
 
@@ -110,6 +118,11 @@ export class App implements OnInit {
     const d = this.latestDay();
     return d ? new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date(d + 'T00:00:00')) : '—';
   });
+  readonly roles = computed(() => {
+    const counts = new Map<string, number>();
+    for (const j of this.jobs()) counts.set(j.role, (counts.get(j.role) ?? 0) + 1);
+    return [...counts].map(([name, count]) => ({ name, count })).sort((a, b) => b.count - a.count);
+  });
   readonly jobTypes = computed(() => [...new Set(this.jobs().map(j => j.jobType).filter(Boolean))].sort());
 
   readonly filtered = computed(() => {
@@ -118,7 +131,8 @@ export class App implements OnInit {
     const list = this.jobs().filter(j =>
       (!this.kenyaOnly() || j.openToKenya) &&
       (!type || j.jobType === type) &&
-      (!q || `${j.title} ${j.company} ${j.location}`.toLowerCase().includes(q)));
+      (!this.role() || j.role === this.role()) &&
+      (!q || `${j.title} ${j.company} ${j.location} ${j.role}`.toLowerCase().includes(q)));
     return this.sort() === 'company'
       ? list.sort((a, b) => a.company.localeCompare(b.company))
       : list.sort((a, b) => b.published.localeCompare(a.published));

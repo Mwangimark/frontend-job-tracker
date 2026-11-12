@@ -6,6 +6,7 @@ export interface Job {
   company: string;
   location: string;
   openToKenya: boolean;
+  role: string;
   jobType: string;
   salary: string;
   url: string;
@@ -54,6 +55,7 @@ export function toJob(r: Record<string, string>): Job {
     company: r['company'],
     location: r['location'],
     openToKenya: r['open_to_kenya'] === 'yes',
+    role: r['role'] || 'General',
     jobType: r['job_type'],
     salary: r['salary'],
     url: r['url'],
