@@ -18,11 +18,15 @@ from datetime import datetime, timezone
 # Role is decided from the job title, first match wins (order matters:
 # "Full-stack" before "Frontend", "React Native" before "React").
 ROLE_RULES = [
+    ("Engineering Leadership", ["head of", "engineering manager", "director", "vp ", "cto"]),
     ("Full-stack", ["full stack", "full-stack", "fullstack"]),
     ("Mobile", ["mobile", "ios", "android", "flutter", "react native", "kotlin", "swift"]),
-    ("Frontend", ["frontend", "front-end", "front end", "angular", "javascript", "typescript", "react", "vue", "ui engineer", "web developer"]),
-    ("DevOps & Cloud", ["devops", "sre", "site reliability", "platform", "infrastructure", "cloud", "kubernetes"]),
-    ("Data & AI", ["data", "machine learning", " ml ", "ai ", " ai", "llm", "analytics"]),
+    ("Frontend", ["frontend", "front-end", "front end", "angular", "javascript", "typescript", "react", "vue", "ui engineer", "web developer", "web engineer", "website"]),
+    ("DevOps & Cloud", ["devops", "sre", "reliability", "platform", "infrastructure", "cloud", "kubernetes"]),
+    ("Data & AI", ["data", "machine learning", " ml ", "ai ", " ai", "llm", "analytics", "prompt"]),
+    ("Solutions & Integrations", ["forward deployed", "solutions", "integration", "gtm", "salesforce",
+                                  "business systems", "developer advocate", "success engineer"]),
+    ("Embedded & Systems", ["embedded", "linux", "firmware", "networking", " os ", "kernel", "hardware"]),
     ("QA & Testing", ["qa", "quality", "test", "sdet"]),
     ("Backend", ["backend", "back-end", "back end", "api", "python", "java", "golang", " go ", "ruby", "rails",
                  "php", "laravel", "node", ".net", "c#", "scala", "elixir"]),
@@ -105,7 +109,7 @@ def classify(title):
     for role, words in ROLE_RULES:
         if any(w in t for w in words):
             return role
-    return "General"
+    return "General Software"
 
 
 def open_to_kenya(location):
@@ -203,8 +207,7 @@ def main():
     seen = {j["id"] for j in jobs}
 
     for j in jobs:  # rows saved before roles / sources existed
-        if not j.get("role"):
-            j["role"] = classify(j["title"])
+        j["role"] = classify(j["title"])  # recomputed so rule changes apply to old rows
         if not j.get("source"):
             j["source"] = "Remotive"
 

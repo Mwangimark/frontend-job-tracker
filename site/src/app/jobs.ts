@@ -56,7 +56,7 @@ export function toJob(r: Record<string, string>): Job {
     company: r['company'],
     location: r['location'],
     openToKenya: r['open_to_kenya'] === 'yes',
-    role: r['role'] || 'General',
+    role: r['role'] || 'General Software',
     jobType: r['job_type'],
     salary: r['salary'],
     url: r['url'],
