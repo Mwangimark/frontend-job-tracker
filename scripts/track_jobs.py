@@ -1,4 +1,4 @@
-"""Fetch remote software development jobs from Remotive, classify them by role, and update the tracker.
+"""Fetch remote software development jobs from Remotive and Jobicy, classify them by role, and update the tracker.
 
 Writes:
   data/jobs.csv         every job ever seen (deduplicated by id)
@@ -7,6 +7,7 @@ Writes:
 Uses only the Python standard library.
 """
 import csv
+import html
 import json
 import os
 import sys
@@ -26,7 +27,8 @@ ROLE_RULES = [
     ("Backend", ["backend", "back-end", "back end", "api", "python", "java", "golang", " go ", "ruby", "rails",
                  "php", "laravel", "node", ".net", "c#", "scala", "elixir"]),
 ]
-API = "https://remotive.com/api/remote-jobs"
+REMOTIVE_API = "https://remotive.com/api/remote-jobs"
+JOBICY_API = "https://jobicy.com/api/v2/remote-jobs"
 # Location strings that mean someone in Kenya can apply
 OPEN_TO_KENYA = ["worldwide", "anywhere", "africa", "kenya", "emea", "global"]
 
@@ -35,14 +37,67 @@ JOBS_CSV = os.path.join(ROOT, "data", "jobs.csv")
 STATS_CSV = os.path.join(ROOT, "data", "daily_stats.csv")
 README = os.path.join(ROOT, "README.md")
 JOB_FIELDS = ["id", "first_seen", "published", "title", "company", "location",
-              "open_to_kenya", "role", "job_type", "salary", "url"]
+              "open_to_kenya", "role", "job_type", "salary", "url", "source"]
 
 
-def fetch():
-    url = f"{API}?{urllib.parse.urlencode({'category': 'software-dev'})}"
+def get_json(url):
     req = urllib.request.Request(url, headers={"User-Agent": "job-tracker (GitHub Actions)"})
     with urllib.request.urlopen(req, timeout=30) as r:
-        return json.load(r).get("jobs", [])
+        return json.load(r)
+
+
+def norm_type(t):
+    """'Full-Time' / 'full-time' / 'full_time' -> 'full_time'."""
+    return str(t or "").strip().lower().replace("-", "_").replace(" ", "_")
+
+
+def fetch_remotive():
+    data = get_json(f"{REMOTIVE_API}?{urllib.parse.urlencode({'category': 'software-dev'})}")
+    for j in data.get("jobs", []):
+        if j.get("category") != "Software Development":
+            continue
+        yield {
+            "id": str(j["id"]),  # Remotive ids kept unprefixed for continuity with earlier rows
+            "published": j.get("publication_date", ""),
+            "title": j.get("title", ""),
+            "company": j.get("company_name", ""),
+            "location": j.get("candidate_required_location", ""),
+            "job_type": norm_type(j.get("job_type")),
+            "salary": j.get("salary", ""),
+            "url": j.get("url", ""),
+            "source": "Remotive",
+        }
+
+
+def jobicy_salary(j):
+    lo = j.get("salaryMin") or j.get("annualSalaryMin")
+    hi = j.get("salaryMax") or j.get("annualSalaryMax")
+    if not (lo or hi):
+        return ""
+    cur = j.get("salaryCurrency") or ""
+    per = j.get("salaryPeriod") or ("yearly" if j.get("annualSalaryMin") else "")
+    amount = f"{lo}–{hi}" if lo and hi else str(lo or hi)
+    return " ".join(x for x in [cur, amount, f"/ {per}" if per else ""] if x)
+
+
+def fetch_jobicy():
+    data = get_json(f"{JOBICY_API}?{urllib.parse.urlencode({'count': 100, 'industry': 'dev'})}")
+    for j in data.get("jobs", []):
+        types = j.get("jobType") or []
+        yield {
+            "id": f"jobicy-{j['id']}",
+            "published": str(j.get("pubDate", "")).replace(" ", "T"),
+            "title": html.unescape(j.get("jobTitle", "")),
+            "company": html.unescape(j.get("companyName", "")),
+            "location": j.get("jobGeo", ""),
+            "job_type": norm_type(types[0] if isinstance(types, list) and types else types),
+            "salary": jobicy_salary(j),
+            "url": j.get("url", ""),
+            "source": "Jobicy",
+        }
+
+
+SOURCES = [("Remotive", fetch_remotive), ("Jobicy", fetch_jobicy)]
 
 
 def classify(title):
@@ -103,7 +158,7 @@ def build_readme(jobs, stats, today):
 
 Tracks remote **software development** jobs every day, sorts them by role (frontend, backend,
 full-stack, mobile and more), and flags the ones open to candidates in Kenya. A GitHub Actions workflow runs a Python script on a schedule, fetches listings
-from the [Remotive](https://remotive.com) public API, deduplicates them, and commits the updated data.
+from the [Remotive](https://remotive.com) and [Jobicy](https://jobicy.com) public APIs, deduplicates them, and commits the updated data.
 
 **Live site:** https://mwangimark.github.io/frontend-job-tracker/ (Angular app in `site/`, redeployed after every update)
 
@@ -138,7 +193,7 @@ Bars: all new jobs. Line: new jobs open to Kenya.
 - `.github/workflows/deploy-site.yml` rebuilds the Angular site in `site/` with the new data
   and deploys it to GitHub Pages.
 
-Job data comes from [Remotive](https://remotive.com); each link goes to the original listing.
+Job data comes from [Remotive](https://remotive.com) and [Jobicy](https://jobicy.com); each link goes to the original listing.
 """
 
 
@@ -147,34 +202,31 @@ def main():
     jobs = read_csv(JOBS_CSV)
     seen = {j["id"] for j in jobs}
 
-    for j in jobs:  # rows saved before roles existed
+    for j in jobs:  # rows saved before roles / sources existed
         if not j.get("role"):
             j["role"] = classify(j["title"])
+        if not j.get("source"):
+            j["source"] = "Remotive"
 
-    try:
-        fetched = {str(job["id"]): job for job in fetch()
-                   if job.get("category") == "Software Development"}
-    except Exception as e:
-        sys.exit(f"Fetching jobs failed; nothing updated. {e}")
+    fetched, failures = {}, []
+    for name, fetch in SOURCES:
+        try:
+            for job in fetch():
+                fetched[job["id"]] = job
+        except Exception as e:  # one source down shouldn't stop the other
+            failures.append(name)
+            print(f"{name} failed: {e}", file=sys.stderr)
+    if len(failures) == len(SOURCES):
+        sys.exit("All sources failed; nothing updated.")
 
     new = []
     for jid, job in fetched.items():
         if jid in seen:
             continue
-        loc = job.get("candidate_required_location", "")
-        new.append({
-            "id": jid,
-            "first_seen": today,
-            "published": job.get("publication_date", ""),
-            "title": job.get("title", ""),
-            "company": job.get("company_name", ""),
-            "location": loc,
-            "open_to_kenya": "yes" if open_to_kenya(loc) else "no",
-            "role": classify(job.get("title", "")),
-            "job_type": job.get("job_type", ""),
-            "salary": job.get("salary", ""),
-            "url": job.get("url", ""),
-        })
+        new.append({**job,
+                    "first_seen": today,
+                    "open_to_kenya": "yes" if open_to_kenya(job["location"]) else "no",
+                    "role": classify(job["title"])})
     jobs.extend(new)
     write_csv(JOBS_CSV, jobs, JOB_FIELDS)
 

@@ -10,6 +10,7 @@ export interface Job {
   jobType: string;
   salary: string;
   url: string;
+  source: string;
 }
 
 export interface DayStat {
@@ -59,6 +60,7 @@ export function toJob(r: Record<string, string>): Job {
     jobType: r['job_type'],
     salary: r['salary'],
     url: r['url'],
+    source: r['source'] || 'Remotive',
   };
 }
 

@@ -80,7 +80,7 @@ type SortKey = 'newest' | 'company';
                   } @else {
                     <span class="badge restricted">Region restricted</span>
                   }
-                  <span class="date">{{ relative(j.published) }}</span>
+                  <span class="date">{{ relative(j.published) }} · via {{ j.source }}</span>
                 </div>
                 <a class="apply" [href]="j.url" target="_blank" rel="noopener">View & apply →</a>
               </article>
@@ -93,7 +93,8 @@ type SortKey = 'newest' | 'company';
     </main>
 
     <footer class="wrap foot">
-      Job listings from <a href="https://remotive.com" target="_blank" rel="noopener">Remotive</a>.
+      Job listings from <a href="https://remotive.com" target="_blank" rel="noopener">Remotive</a> and
+      <a href="https://jobicy.com" target="_blank" rel="noopener">Jobicy</a>.
       Collected daily by a GitHub Actions workflow · Built with Angular by Mark Mwangi.
     </footer>
   `,
