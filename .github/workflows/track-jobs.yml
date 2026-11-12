@@ -22,12 +22,10 @@ jobs:
         run: python scripts/track_jobs.py
 
       - name: Commit changes
-        env:
-          COMMIT_NAME: ${{ secrets.COMMIT_NAME }}
-          COMMIT_EMAIL: ${{ secrets.COMMIT_EMAIL }}
         run: |
-          git config user.name  "$COMMIT_NAME"
-          git config user.email "$COMMIT_EMAIL"
+          # GitHub noreply address, so commits count on the profile graph
+          git config user.name  "Mwangimark"
+          git config user.email "132432689+Mwangimark@users.noreply.github.com"
           git add data README.md
           if git diff --cached --quiet; then
             echo "No changes"
