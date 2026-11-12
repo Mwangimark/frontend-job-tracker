@@ -90,6 +90,8 @@ Tracks remote **Angular, TypeScript and frontend** roles every day and flags the
 candidates in Kenya. A GitHub Actions workflow runs a Python script on a schedule, fetches listings
 from the [Remotive](https://remotive.com) public API, deduplicates them, and commits the updated data.
 
+**Live site:** https://mwangimark.github.io/frontend-job-tracker/ (Angular app in `site/`, redeployed after every update)
+
 **Last updated:** {today} · **Jobs tracked:** {total} · **Open to Kenya:** {kenya} ·
 **New today:** {today_row["new_jobs"]} ({today_row["new_open_to_kenya"]} open to Kenya)
 
@@ -116,6 +118,8 @@ Bars: all new jobs. Line: new jobs open to Kenya.
 - `scripts/track_jobs.py` queries the API for each search term, merges results into
   `data/jobs.csv`, appends a row to `data/daily_stats.csv`, and regenerates this README.
 - Only Python's standard library is used, so the workflow needs no dependencies.
+- `.github/workflows/deploy-site.yml` rebuilds the Angular site in `site/` with the new data
+  and deploys it to GitHub Pages.
 
 Job data comes from [Remotive](https://remotive.com); each link goes to the original listing.
 """

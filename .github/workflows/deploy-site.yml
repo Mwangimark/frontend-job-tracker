@@ -1,0 +1,55 @@
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+    paths: ["site/**", ".github/workflows/deploy-site.yml"]
+  workflow_run:                 # redeploy after each daily data update
+    workflows: ["Track jobs"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main             # latest data, including the commit the tracker just made
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Build Angular site
+        working-directory: site
+        run: |
+          npm ci
+          mkdir -p public/data && cp ../data/*.csv public/data/
+          npx ng build --base-href /frontend-job-tracker/
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/dist/site/browser
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
