@@ -15,6 +15,8 @@ import urllib.request
 from datetime import datetime, timezone
 
 SEARCH_TERMS = ["angular", "typescript", "frontend", "front end"]
+# A job is kept only if its title or tags mention one of these
+KEYWORDS = ["angular", "typescript", "frontend", "front-end", "front end", "javascript", "ui engineer"]
 API = "https://remotive.com/api/remote-jobs"
 # Location strings that mean someone in Kenya can apply
 OPEN_TO_KENYA = ["worldwide", "anywhere", "africa", "kenya", "emea", "global"]
@@ -28,10 +30,15 @@ JOB_FIELDS = ["id", "first_seen", "published", "title", "company", "location",
 
 
 def fetch(term):
-    url = f"{API}?{urllib.parse.urlencode({'search': term})}"
+    url = f"{API}?{urllib.parse.urlencode({'search': term, 'category': 'software-dev'})}"
     req = urllib.request.Request(url, headers={"User-Agent": "job-tracker (GitHub Actions)"})
     with urllib.request.urlopen(req, timeout=30) as r:
         return json.load(r).get("jobs", [])
+
+
+def relevant(job):
+    text = " ".join([job.get("title", "")] + list(job.get("tags") or [])).lower()
+    return any(k in text for k in KEYWORDS)
 
 
 def open_to_kenya(location):
@@ -121,7 +128,8 @@ def main():
     for term in SEARCH_TERMS:
         try:
             for job in fetch(term):
-                fetched[str(job["id"])] = job
+                if relevant(job):
+                    fetched[str(job["id"])] = job
         except Exception as e:  # keep going if one search fails
             errors += 1
             print(f"Search '{term}' failed: {e}", file=sys.stderr)
