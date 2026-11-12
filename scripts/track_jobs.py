@@ -37,6 +37,8 @@ def fetch(term):
 
 
 def relevant(job):
+    if job.get("category") != "Software Development":
+        return False
     text = " ".join([job.get("title", "")] + list(job.get("tags") or [])).lower()
     return any(k in text for k in KEYWORDS)
 
