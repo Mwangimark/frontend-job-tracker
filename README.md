@@ -6,19 +6,19 @@ from the [Remotive](https://remotive.com) and [Jobicy](https://jobicy.com) publi
 
 **Live site:** https://mwangimark.github.io/frontend-job-tracker/ (Angular app in `site/`, redeployed after every update)
 
-**Last updated:** 2026-11-12 · **Jobs tracked:** 106 · **Open to Kenya:** 7 ·
-**New today:** 106 (7 open to Kenya)
+**Last updated:** 2026-11-13 · **Jobs tracked:** 162 · **Open to Kenya:** 14 ·
+**New today:** 56 (7 open to Kenya)
 
-**By role:** Data & AI: 19 · General Software: 19 · Solutions & Integrations: 14 · Full-stack: 12 · Backend: 11 · Engineering Leadership: 11 · DevOps & Cloud: 6 · Frontend: 6 · Mobile: 3 · QA & Testing: 3 · Embedded & Systems: 2
+**By role:** General Software: 35 · Data & AI: 28 · Solutions & Integrations: 18 · Backend: 16 · Engineering Leadership: 16 · Full-stack: 15 · Frontend: 9 · QA & Testing: 9 · DevOps & Cloud: 8 · Embedded & Systems: 5 · Mobile: 3
 
 ## New jobs per day (last 30 days)
 
 ```mermaid
 xychart-beta
-    x-axis ["11-12"]
+    x-axis ["11-12", "11-13"]
     y-axis "New jobs" 0 --> 106
-    bar [106]
-    line [7]
+    bar [106, 56]
+    line [7, 7]
 ```
 Bars: all new jobs. Line: new jobs open to Kenya.
 
@@ -26,26 +26,26 @@ Bars: all new jobs. Line: new jobs open to Kenya.
 
 | Published | Job | Role | Company | Location | Open to Kenya |
 |---|---|---|---|---|---|
-| 2026-11-12 | [Senior Software Engineer, Developer Enablement](https://jobicy.com/jobs/161529-senior-software-engineer-developer-enablement) | General Software | Fleetio | Canada,  Mexico,  USA |  |
-| 2026-11-12 | [Staff Backend Engineer - Platform (f/m/d)](https://jobicy.com/jobs/161525-staff-backend-engineer-platform-f-m-d) | DevOps & Cloud | Apaleo | Europe |  |
-| 2026-11-12 | [Salesforce Developer](https://jobicy.com/jobs/161517-salesforce-developer) | Solutions & Integrations | Nivoda | UK |  |
-| 2026-11-12 | [Senior Developer Advocate - Modern App Development](https://jobicy.com/jobs/161516-senior-developer-advocate-modern-app-development) | Solutions & Integrations | Datadog | USA |  |
-| 2026-11-12 | [GTM System Engineer](https://jobicy.com/jobs/161515-gtm-system-engineer) | Solutions & Integrations | Nivoda | Sweden,  UK |  |
-| 2026-11-12 | [Senior Integration Engineer](https://jobicy.com/jobs/155132-senior-integration-engineer-2) | Solutions & Integrations | Legion | Mexico |  |
-| 2026-11-12 | [Engineering Manager, AI CICD](https://jobicy.com/jobs/155140-engineering-manager-ai-cicd) | Engineering Leadership | Chainguard | UK,  USA |  |
-| 2026-11-12 | [Senior Forward Deployed Engineer (AI Agent) - UK](https://jobicy.com/jobs/155100-senior-forward-deployed-engineer-ai-agent-uk) | Data & AI | Cresta | UK |  |
-| 2026-11-12 | [Engineering Manager (Subscriptions)](https://jobicy.com/jobs/155099-engineering-manager-subscriptions) | Engineering Leadership | Paddle | Ireland,  Portugal,  UK |  |
-| 2026-11-12 | [Frontend Engineer React and AWS](https://jobicy.com/jobs/145744-frontend-engineer-react-and-aws) | Frontend | Numentica | USA |  |
-| 2026-11-12 | [Software Engineer (Remote Eligible in Bulgaria)](https://jobicy.com/jobs/155069-software-engineer-remote-eligible-in-bulgaria) | General Software | Smartsheet | Bulgaria |  |
-| 2026-11-12 | [Go (Golang) Software Engineer, Developer Tooling and Containers](https://jobicy.com/jobs/150365-go-golang-software-engineer-developer-tooling-and-containers) | Backend | Canonical | APAC |  |
-| 2026-11-12 | [Software Engineer - Python - Container Images](https://jobicy.com/jobs/150364-software-engineer-python-container-images) | Backend | Canonical | APAC,  EMEA,  LATAM,  Canada,  USA | ✅ |
-| 2026-11-12 | [Embedded Linux Consultant - Japan](https://jobicy.com/jobs/150361-embedded-linux-consultant-japan) | Embedded & Systems | Canonical | Japan |  |
-| 2026-11-12 | [Open Source Networking Software Engineer - ToR Switch / SmartNIC / DPU](https://jobicy.com/jobs/150360-open-source-networking-software-engineer-tor-switch-smartnic-dpu) | Embedded & Systems | Canonical | APAC,  LATAM,  Canada,  China,  USA |  |
-| 2026-11-11 | [Senior Fullstack Engineer](https://jobicy.com/jobs/161444-senior-fullstack-engineer-4) | Full-stack | Toptal | LATAM,  Europe |  |
-| 2026-11-11 | [Full Stack AI Engineer](https://jobicy.com/jobs/161438-full-stack-ai-engineer) | Full-stack | 3Y Health | Argentina |  |
-| 2026-11-11 | [Full Stack Engineer](https://jobicy.com/jobs/161435-full-stack-engineer-9) | Full-stack | 3Y Health | Argentina |  |
-| 2026-11-11 | [Founding Engineer](https://jobicy.com/jobs/161432-founding-engineer) | General Software | 3Y Health | Argentina |  |
-| 2026-11-11 | [AI Product Engineer](https://jobicy.com/jobs/161428-ai-product-engineer) | Data & AI | 3Y Health | Argentina |  |
+| 2026-11-13 | [OneStream Developer - Technical Lead (Philippines)](https://jobicy.com/jobs/161799-onestream-developer-technical-lead-philippines) | General Software | CrossCountry Consulting | Philippines |  |
+| 2026-11-13 | [Coupa Technical Integration Consultant](https://jobicy.com/jobs/161788-coupa-technical-integration-consultant) | Solutions & Integrations | CrossCountry Consulting | Philippines |  |
+| 2026-11-13 | [Front End Engineer](https://jobicy.com/jobs/161780-front-end-engineer) | Frontend | Oddball | USA |  |
+| 2026-11-13 | [Sensing OPIR Engineer – SME #899](https://jobicy.com/jobs/161777-sensing-opir-engineer-sme-899) | General Software | Allen Integrated Solutions | USA |  |
+| 2026-11-13 | [Sensing OPIR Engineer - Mid Level #900](https://jobicy.com/jobs/161776-sensing-opir-engineer-mid-level-900) | General Software | Allen Integrated Solutions | USA |  |
+| 2026-11-13 | [Sensing OPIR Engineer - #898](https://jobicy.com/jobs/161774-sensing-opir-engineer-898) | General Software | Allen Integrated Solutions | USA |  |
+| 2026-11-13 | [Sensing OPIR Engineer - #897](https://jobicy.com/jobs/161771-sensing-opir-engineer-897) | General Software | Allen Integrated Solutions | USA |  |
+| 2026-11-13 | [Freelance Software Tester / Remote in Italy](https://jobicy.com/jobs/161767-freelance-software-tester-remote-in-italy) | QA & Testing | Testlio | Belgium,  Germany,  Italy |  |
+| 2026-11-13 | [Senior Product Engineer](https://jobicy.com/jobs/161764-senior-product-engineer-2) | General Software | Fever | Spain |  |
+| 2026-11-13 | [Andromeda Delta - Audio Transcription Adjudicator V2 - Spanish (Spain)](https://jobicy.com/jobs/161761-andromeda-delta-audio-transcription-adjudicator-v2-spanish-spain) | General Software | Welo Global | Spain |  |
+| 2026-11-13 | [Freelance Software Tester / Remote in Germany](https://jobicy.com/jobs/161756-freelance-software-tester-remote-in-germany) | QA & Testing | Testlio | Belgium,  Germany,  Italy |  |
+| 2026-11-13 | [Senior PHP/Wordpress Developer](https://jobicy.com/jobs/161754-senior-php-wordpress-developer) | Backend | Fever | Spain |  |
+| 2026-11-13 | [Staff Forward Deployed Engineer, EMEA](https://jobicy.com/jobs/161753-staff-forward-deployed-engineer-emea) | Solutions & Integrations | GitLab | Austria,  France,  Germany,  Ireland,  Netherlands,  Spain,  UK |  |
+| 2026-11-13 | [Freelance Software Tester / Remote in Belgium](https://jobicy.com/jobs/161742-freelance-software-tester-remote-in-belgium) | QA & Testing | Testlio | Belgium,  Germany,  Italy |  |
+| 2026-11-13 | [Staff Backend Engineer, Performance Enablement](https://jobicy.com/jobs/161737-staff-backend-engineer-performance-enablement) | Backend | GitLab | Poland |  |
+| 2026-11-13 | [Software Engineer, Systems Architecture](https://jobicy.com/jobs/161726-software-engineer-systems-architecture) | General Software | Valinor Enterprises, Inc. | USA |  |
+| 2026-11-13 | [Software Engineer, Backend (Platform)](https://jobicy.com/jobs/161723-software-engineer-backend-platform) | DevOps & Cloud | Valinor Enterprises, Inc. | USA |  |
+| 2026-11-13 | [Senior Software Engineer (Full Stack / Node.js & React / AI Focus)](https://jobicy.com/jobs/155233-senior-software-engineer-full-stack-node-js-react-ai-focus) | Full-stack | Oowlish Technology | Brazil |  |
+| 2026-11-13 | [Full Stack Web Engineer](https://jobicy.com/jobs/155231-full-stack-web-engineer) | Full-stack | Fueled | LATAM |  |
+| 2026-11-13 | [Junior Software Engineer – Early Career (Strong Problem solving & Coding Focus) - 100% Remote within Spain](https://jobicy.com/jobs/155228-junior-software-engineer-early-career-strong-problem-solving-coding-focus-100-remote-within-spain-2) | General Software | Docplanner | Spain |  |
 
 ## How it works
 
