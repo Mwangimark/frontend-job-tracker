@@ -6,19 +6,19 @@ from the [Remotive](https://remotive.com) and [Jobicy](https://jobicy.com) publi
 
 **Live site:** https://mwangimark.github.io/frontend-job-tracker/ (Angular app in `site/`, redeployed after every update)
 
-**Last updated:** 2026-11-14 · **Jobs tracked:** 209 · **Open to Kenya:** 15 ·
-**New today:** 47 (1 open to Kenya)
+**Last updated:** 2026-11-15 · **Jobs tracked:** 219 · **Open to Kenya:** 16 ·
+**New today:** 10 (1 open to Kenya)
 
-**By role:** General Software: 48 · Data & AI: 34 · Full-stack: 22 · Solutions & Integrations: 22 · Engineering Leadership: 19 · Backend: 18 · Frontend: 11 · Embedded & Systems: 11 · QA & Testing: 10 · DevOps & Cloud: 9 · Mobile: 5
+**By role:** General Software: 51 · Data & AI: 35 · Solutions & Integrations: 25 · Full-stack: 22 · Engineering Leadership: 20 · Backend: 18 · Embedded & Systems: 12 · Frontend: 11 · DevOps & Cloud: 10 · QA & Testing: 10 · Mobile: 5
 
 ## New jobs per day (last 30 days)
 
 ```mermaid
 xychart-beta
-    x-axis ["11-12", "11-13", "11-14"]
+    x-axis ["11-12", "11-13", "11-14", "11-15"]
     y-axis "New jobs" 0 --> 106
-    bar [106, 56, 47]
-    line [7, 7, 1]
+    bar [106, 56, 47, 10]
+    line [7, 7, 1, 1]
 ```
 Bars: all new jobs. Line: new jobs open to Kenya.
 
@@ -26,6 +26,16 @@ Bars: all new jobs. Line: new jobs open to Kenya.
 
 | Published | Job | Role | Company | Location | Open to Kenya |
 |---|---|---|---|---|---|
+| 2026-11-15 | [Principal Software Engineer - XTM One](https://jobicy.com/jobs/162276-principal-software-engineer-xtm-one) | General Software | Filigran | France,  Germany,  Italy,  Portugal,  Spain,  UK |  |
+| 2026-11-15 | [AI Platform Engineer](https://jobicy.com/jobs/155385-ai-platform-engineer) | DevOps & Cloud | Supabase | Anywhere | ✅ |
+| 2026-11-15 | [Solutions Architect f/m/d](https://jobicy.com/jobs/155375-solutions-architect-f-m-d) | Solutions & Integrations | Apaleo | France |  |
+| 2026-11-15 | [Junior Software Engineer](https://jobicy.com/jobs/153164-junior-software-engineer-2) | General Software | PolicyMe | Canada |  |
+| 2026-11-15 | [Senior Forward Deployed Engineer](https://jobicy.com/jobs/155357-senior-forward-deployed-engineer-2) | Solutions & Integrations | Fleetio | Canada,  Mexico,  USA |  |
+| 2026-11-14 | [Senior Systems Engineer – Avionics & Embedded Systems](https://jobicy.com/jobs/162243-senior-systems-engineer-avionics-embedded-systems) | Embedded & Systems | Quest Defense Systems & Solutions, Inc. | USA |  |
+| 2026-11-14 | [Senior Mechanical Design Engineer - Structures & Systems](https://jobicy.com/jobs/162237-senior-mechanical-design-engineer-structures-systems) | General Software | Quest Defense Systems & Solutions, Inc. | USA |  |
+| 2026-11-14 | [Senior Backend Engineer (Data serving)](https://jobicy.com/jobs/162192-senior-backend-engineer-data-serving-2) | Data & AI | Pleo | Denmark,  Portugal,  Spain,  UK |  |
+| 2026-11-14 | [Senior Customer Integration Engineer](https://jobicy.com/jobs/162189-senior-customer-integration-engineer) | Solutions & Integrations | Unite Us | USA |  |
+| 2026-11-14 | [Director, Finance Systems & ERP](https://jobicy.com/jobs/162183-director-finance-systems-erp) | Engineering Leadership | Smartsheet | USA |  |
 | 2026-11-14 | [Senior Software Engineer, Frontend / Product Engineering](https://jobicy.com/jobs/162134-senior-software-engineer-frontend-product-engineering) | Frontend | TRM Labs | USA |  |
 | 2026-11-14 | [Senior GTM Systems Engineer](https://jobicy.com/jobs/162127-senior-gtm-systems-engineer) | Solutions & Integrations | Apollo.io | USA |  |
 | 2026-11-14 | [Senior Engineer, Server – NBA 2K](https://jobicy.com/jobs/162125-senior-engineer-server-nba-2k) | General Software | Visual Concepts | USA |  |
@@ -36,16 +46,6 @@ Bars: all new jobs. Line: new jobs open to Kenya.
 | 2026-11-14 | [Senior Full Stack Engineer - Databases - Analytics / Sweden / Remote](https://jobicy.com/jobs/162112-senior-full-stack-engineer-databases-analytics-sweden-remote) | Full-stack | Grafana Labs | Germany,  Ireland,  Spain,  Sweden,  UK |  |
 | 2026-11-14 | [Senior Full Stack Engineer - Databases, Analytics / Spain / Remote](https://jobicy.com/jobs/162108-senior-full-stack-engineer-databases-analytics-spain-remote) | Full-stack | Grafana Labs | Germany,  Ireland,  Spain,  Sweden,  UK |  |
 | 2026-11-14 | [Senior Full Stack Engineer - Databases - Analytics / Ireland / Remote](https://jobicy.com/jobs/162104-senior-full-stack-engineer-databases-analytics-ireland-remote) | Full-stack | Grafana Labs | Germany,  Ireland,  Spain,  Sweden,  UK |  |
-| 2026-11-14 | [Senior Full Stack Engineer - Databases - Analytics / Germany / Remote](https://jobicy.com/jobs/162101-senior-full-stack-engineer-databases-analytics-germany-remote) | Full-stack | Grafana Labs | Germany,  Ireland,  Spain,  Sweden,  UK |  |
-| 2026-11-14 | [Product Engineer (all levels)](https://jobicy.com/jobs/162100-product-engineer-all-levels) | General Software | Anima | UK |  |
-| 2026-11-14 | [Technical Lead - Golang](https://jobicy.com/jobs/162099-technical-lead-golang) | Backend | Nearform | UK |  |
-| 2026-11-14 | [Machine Learning Engineering Manager II](https://jobicy.com/jobs/162092-machine-learning-engineering-manager-ii) | Engineering Leadership | Spotify | Sweden,  UK |  |
-| 2026-11-14 | [Engineering Manager, Ads Product Catalogs](https://jobicy.com/jobs/162091-engineering-manager-ads-product-catalogs) | Engineering Leadership | Reddit | Netherlands,  UK |  |
-| 2026-11-14 | [Senior Staff Engineer - Mobile/Kotlin](https://jobicy.com/jobs/155305-senior-staff-engineer-mobile-kotlin) | Mobile | Fanatics | USA |  |
-| 2026-11-14 | [Ai Solution Engineer - (Technology Support)](https://jobicy.com/jobs/155288-ai-solution-engineer-technology-support) | Data & AI | PointClickCare | Canada |  |
-| 2026-11-14 | [Senior Software Engineer](https://jobicy.com/jobs/155311-senior-software-engineer-14) | General Software | RStudio | USA |  |
-| 2026-11-14 | [Senior Software Engineer, Observability](https://jobicy.com/jobs/155325-senior-software-engineer-observability) | General Software | NetBox Labs | LATAM,  USA |  |
-| 2026-11-14 | [Senior Staff Software Engineer, Partner Integrations](https://jobicy.com/jobs/155313-senior-staff-software-engineer-partner-integrations) | Solutions & Integrations | Flex | Anywhere | ✅ |
 
 ## How it works
 
