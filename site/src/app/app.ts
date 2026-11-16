@@ -1,21 +1,26 @@
 import { Component, computed, linkedSignal, OnInit, signal } from '@angular/core';
 import { DailyChart } from './daily-chart';
+import { Logo } from './logo';
 import { DayStat, Job, jobTypeLabel, parseCsv, toDayStat, toJob } from './jobs';
 
 type SortKey = 'newest' | 'company';
 
 @Component({
   selector: 'app-root',
-  imports: [DailyChart],
+  imports: [DailyChart, Logo],
   template: `
     <header class="top">
-      <div class="wrap top-inner">
-        <div>
-          <h1>Remote Software Jobs</h1>
-          <p class="sub">Remote software development jobs (frontend, backend, full-stack, mobile and more),
-            updated every morning. Roles open to candidates in Kenya are marked.</p>
+      <div class="wrap">
+        <div class="brand">
+          <app-logo [size]="44" />
+          <span class="brand-name">Remote Software Jobs</span>
+          @if (lastUpdated() !== '—') {
+            <span class="live"><span class="dot"></span>Updated {{ lastUpdated() }}</span>
+          }
         </div>
-        <a class="gh" href="https://github.com/Mwangimark/frontend-job-tracker" target="_blank" rel="noopener">View on GitHub</a>
+        <h1>Find remote developer roles you can actually apply for.</h1>
+        <p class="sub">Frontend, backend, full-stack, mobile and more, collected every day from public job boards.
+          Roles open to candidates in Kenya are marked.</p>
       </div>
     </header>
 
@@ -67,17 +72,20 @@ type SortKey = 'newest' | 'company';
             @for (j of paged(); track j.id) {
               <article class="card">
                 <div class="card-head">
-                  <span class="company">{{ j.company }}</span>
-                  <span class="badges">
-                    <span class="badge role">{{ j.role }}</span>
-                    @if (isNew(j)) { <span class="badge new">New</span> }
+                  <span class="who">
+                    <span class="avatar" [style.background]="avatarColor(j.company)" aria-hidden="true">{{ initials(j.company) }}</span>
+                    <span class="company">{{ j.company }}</span>
                   </span>
+                  @if (isNew(j)) { <span class="badge new">New</span> }
                 </div>
-                <h3>{{ j.title }}</h3>
+                <div class="title-block">
+                  <span class="eyebrow">{{ j.role }}</span>
+                  <h3>{{ j.title }}</h3>
+                </div>
                 <div class="meta">
                   <span>📍 {{ j.location || 'Location not stated' }}</span>
                   <span>💼 {{ typeLabel(j.jobType) }}</span>
-                  @if (j.salary) { <span>💰 {{ j.salary }}</span> }
+                  @if (j.salary) { <span>💰 {{ salary(j.salary) }}</span> }
                 </div>
                 <div class="card-foot">
                   @if (j.openToKenya) {
@@ -112,10 +120,27 @@ type SortKey = 'newest' | 'company';
       }
     </main>
 
-    <footer class="wrap foot">
-      Job listings from <a href="https://remotive.com" target="_blank" rel="noopener">Remotive</a> and
-      <a href="https://jobicy.com" target="_blank" rel="noopener">Jobicy</a>.
-      Collected daily by a GitHub Actions workflow · Built with Angular by Mark Mwangi.
+    <footer class="foot">
+      <div class="wrap foot-inner">
+        <div class="foot-brand">
+          <app-logo [size]="32" />
+          <div>
+            <strong>Remote Software Jobs</strong>
+            <span>Updated daily by a GitHub Actions workflow.</span>
+          </div>
+        </div>
+        <div class="foot-links">
+          <a class="gh" href="https://github.com/Mwangimark/frontend-job-tracker" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg>
+            View source on GitHub
+          </a>
+          <span class="muted">Listings from
+            <a href="https://remotive.com" target="_blank" rel="noopener">Remotive</a> and
+            <a href="https://jobicy.com" target="_blank" rel="noopener">Jobicy</a></span>
+        </div>
+      </div>
+      <div class="wrap foot-bottom">Built with Angular by Mark Mwangi · © {{ year }}</div>
     </footer>
   `,
   styleUrl: './app.css',
@@ -160,6 +185,33 @@ export class App implements OnInit {
   });
 
   readonly typeLabel = jobTypeLabel;
+  readonly year = new Date().getFullYear();
+
+  /** "USD 130000–145000 / yearly" -> "$130k–$145k / year". Other formats are shown as written. */
+  salary(raw: string): string {
+    const m = raw.match(/^([A-Z]{3}) (\d+)(?:–(\d+))?(?: \/ (\w+))?$/);
+    if (!m) return raw;
+    const [, cur, lo, hi, per] = m;
+    const sym: Record<string, string> = { USD: '$', EUR: '€', GBP: '£' };
+    const fmt = (n: string) => {
+      const v = Number(n);
+      return (sym[cur] ?? cur + ' ') + (v >= 1000 ? `${Math.round(v / 1000)}k` : `${v}`);
+    };
+    const period: Record<string, string> = { yearly: 'year', monthly: 'month', hourly: 'hour', weekly: 'week', daily: 'day' };
+    return `${fmt(lo)}${hi ? '–' + fmt(hi) : ''}${per ? ' / ' + (period[per] ?? per) : ''}`;
+  }
+
+  initials(company: string): string {
+    const words = company.replace(/[^\p{L}\p{N} ]/gu, ' ').split(/\s+/).filter(Boolean);
+    return ((words[0]?.[0] ?? '?') + (words[1]?.[0] ?? '')).toUpperCase();
+  }
+
+  /** Stable colour per company, so the same company always gets the same avatar. */
+  avatarColor(company: string): string {
+    let h = 0;
+    for (const c of company) h = (h * 31 + c.charCodeAt(0)) >>> 0;
+    return `hsl(${h % 360} 45% 40%)`;
+  }
 
   // Pagination: page resets to 1 whenever the filtered list changes (search, filters, sort).
   readonly pageSize = 12;
