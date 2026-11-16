@@ -42,6 +42,15 @@ h3 { margin: 0; font-size: 17px; line-height: 1.35; }
 .apply { align-self: flex-start; font-size: 14px; font-weight: 600; color: var(--accent-text); text-decoration: none; }
 .apply:hover { text-decoration: underline; }
 
+.pager { display: flex; justify-content: center; align-items: center; gap: 6px; flex-wrap: wrap; margin-top: 24px; }
+.pager button { font: inherit; font-size: 14px; min-width: 38px; height: 38px; padding: 0 12px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--surface); color: var(--text); cursor: pointer; }
+.pager button:hover:not(:disabled):not(.current) { border-color: var(--accent); color: var(--accent-text); }
+.pager button.current { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; cursor: default; }
+.pager button:disabled { opacity: .4; cursor: default; }
+.pager .ellipsis { color: var(--text-muted); padding: 0 4px; }
+#jobs { scroll-margin-top: 16px; }
+
 .notice { background: var(--surface); border: 1px dashed var(--border); border-radius: 12px; padding: 28px; text-align: center; color: var(--text-muted); }
 .foot { padding-top: 36px; padding-bottom: 36px; font-size: 13px; color: var(--text-muted); }
 .foot a { color: inherit; }

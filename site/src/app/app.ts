@@ -1,4 +1,4 @@
-import { Component, computed, OnInit, signal } from '@angular/core';
+import { Component, computed, linkedSignal, OnInit, signal } from '@angular/core';
 import { DailyChart } from './daily-chart';
 import { DayStat, Job, jobTypeLabel, parseCsv, toDayStat, toJob } from './jobs';
 
@@ -55,11 +55,16 @@ type SortKey = 'newest' | 'company';
           </label>
         </section>
 
-        <p class="count">{{ filtered().length }} of {{ jobs().length }} jobs</p>
+        <p class="count" id="jobs">
+          @if (filtered().length) {
+            Showing {{ rangeStart() }}–{{ rangeEnd() }} of {{ filtered().length }}
+            @if (filtered().length !== jobs().length) { matching } jobs
+          } @else { 0 of {{ jobs().length }} jobs }
+        </p>
 
         @if (filtered().length) {
           <section class="grid">
-            @for (j of filtered(); track j.id) {
+            @for (j of paged(); track j.id) {
               <article class="card">
                 <div class="card-head">
                   <span class="company">{{ j.company }}</span>
@@ -86,6 +91,21 @@ type SortKey = 'newest' | 'company';
               </article>
             }
           </section>
+
+          @if (totalPages() > 1) {
+            <nav class="pager" aria-label="Job pages">
+              <button type="button" (click)="goTo(page() - 1)" [disabled]="page() === 1" aria-label="Previous page">← Prev</button>
+              @for (p of pageNumbers(); track $index) {
+                @if (p === 0) {
+                  <span class="ellipsis">…</span>
+                } @else {
+                  <button type="button" class="num" [class.current]="p === page()" (click)="goTo(p)"
+                          [attr.aria-current]="p === page() ? 'page' : null">{{ p }}</button>
+                }
+              }
+              <button type="button" (click)="goTo(page() + 1)" [disabled]="page() === totalPages()" aria-label="Next page">Next →</button>
+            </nav>
+          }
         } @else {
           <div class="notice">No jobs match these filters.</div>
         }
@@ -140,6 +160,37 @@ export class App implements OnInit {
   });
 
   readonly typeLabel = jobTypeLabel;
+
+  // Pagination: page resets to 1 whenever the filtered list changes (search, filters, sort).
+  readonly pageSize = 12;
+  readonly page = linkedSignal({ source: this.filtered, computation: () => 1 });
+  readonly totalPages = computed(() => Math.max(1, Math.ceil(this.filtered().length / this.pageSize)));
+  readonly paged = computed(() => {
+    const start = (this.page() - 1) * this.pageSize;
+    return this.filtered().slice(start, start + this.pageSize);
+  });
+  readonly rangeStart = computed(() => (this.page() - 1) * this.pageSize + 1);
+  readonly rangeEnd = computed(() => Math.min(this.page() * this.pageSize, this.filtered().length));
+
+  /** Page numbers to show, with 0 marking a gap: 1 … 4 5 6 … 10 */
+  readonly pageNumbers = computed(() => {
+    const total = this.totalPages(), cur = this.page();
+    if (total <= 7) return Array.from({ length: total }, (_, i) => i + 1);
+    const pages = new Set([1, total, cur - 1, cur, cur + 1].filter(p => p >= 1 && p <= total));
+    const sorted = [...pages].sort((a, b) => a - b);
+    const out: number[] = [];
+    sorted.forEach((p, i) => {
+      if (i && p - sorted[i - 1] > 1) out.push(0);
+      out.push(p);
+    });
+    return out;
+  });
+
+  goTo(p: number) {
+    if (p < 1 || p > this.totalPages() || p === this.page()) return;
+    this.page.set(p);
+    document.getElementById('jobs')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 
   async ngOnInit() {
     try {
