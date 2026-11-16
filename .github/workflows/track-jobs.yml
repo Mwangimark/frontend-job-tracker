@@ -33,3 +33,12 @@ jobs:
             git commit -m "data: job snapshot $(date -u +%F)"
             git push
           fi
+
+      - name: Send job alert emails
+        continue-on-error: true   # an email problem should never block the data update or site deploy
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+        run: python scripts/send_alerts.py

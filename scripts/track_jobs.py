@@ -196,6 +196,8 @@ Bars: all new jobs. Line: new jobs open to Kenya.
 - Only Python's standard library is used, so the workflow needs no dependencies.
 - `.github/workflows/deploy-site.yml` rebuilds the Angular site in `site/` with the new data
   and deploys it to GitHub Pages.
+- `scripts/send_alerts.py` emails subscribers their matching new jobs (daily, or weekly on Mondays).
+  Subscribers are stored in Supabase (`supabase/schema.sql`); emails go out through Gmail SMTP.
 
 Job data comes from [Remotive](https://remotive.com) and [Jobicy](https://jobicy.com); each link goes to the original listing.
 """

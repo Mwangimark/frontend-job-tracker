@@ -39,6 +39,8 @@ jobs:
           npm ci
           mkdir -p public/data && cp ../data/*.csv public/data/
           npx ng build --base-href /frontend-job-tracker/
+          # GitHub Pages serves 404.html for unknown paths; reuse the app so /about etc. work when opened directly
+          cp dist/site/browser/index.html dist/site/browser/404.html
 
       - uses: actions/upload-pages-artifact@v3
         with:
