@@ -6,19 +6,19 @@ from the [Remotive](https://remotive.com) and [Jobicy](https://jobicy.com) publi
 
 **Live site:** https://mwangimark.github.io/frontend-job-tracker/ (Angular app in `site/`, redeployed after every update)
 
-**Last updated:** 2026-11-16 · **Jobs tracked:** 251 · **Open to Kenya:** 16 ·
-**New today:** 32 (0 open to Kenya)
+**Last updated:** 2026-11-17 · **Jobs tracked:** 275 · **Open to Kenya:** 16 ·
+**New today:** 24 (0 open to Kenya)
 
-**By role:** General Software: 59 · Data & AI: 38 · Full-stack: 28 · Solutions & Integrations: 28 · Engineering Leadership: 24 · Backend: 22 · Embedded & Systems: 13 · Frontend: 12 · DevOps & Cloud: 11 · QA & Testing: 11 · Mobile: 5
+**By role:** General Software: 70 · Data & AI: 42 · Solutions & Integrations: 30 · Full-stack: 28 · Engineering Leadership: 26 · Backend: 24 · DevOps & Cloud: 13 · Embedded & Systems: 13 · Frontend: 12 · QA & Testing: 12 · Mobile: 5
 
 ## New jobs per day (last 30 days)
 
 ```mermaid
 xychart-beta
-    x-axis ["11-12", "11-13", "11-14", "11-15", "11-16"]
+    x-axis ["11-12", "11-13", "11-14", "11-15", "11-16", "11-17"]
     y-axis "New jobs" 0 --> 106
-    bar [106, 56, 47, 10, 32]
-    line [7, 7, 1, 1, 0]
+    bar [106, 56, 47, 10, 32, 24]
+    line [7, 7, 1, 1, 0, 0]
 ```
 Bars: all new jobs. Line: new jobs open to Kenya.
 
@@ -26,26 +26,26 @@ Bars: all new jobs. Line: new jobs open to Kenya.
 
 | Published | Job | Role | Company | Location | Open to Kenya |
 |---|---|---|---|---|---|
-| 2026-11-16 | [Principal Software Engineer - Observability & Telemetry Data](https://jobicy.com/jobs/162553-principal-software-engineer-observability-telemetry-data) | Data & AI | Smartsheet | USA |  |
-| 2026-11-16 | [NetSuite Developer](https://jobicy.com/jobs/162552-netsuite-developer) | General Software | Cologix, Inc. | USA |  |
-| 2026-11-16 | [Safety Analysis Engineer](https://jobicy.com/jobs/162537-safety-analysis-engineer) | General Software | Oklo Inc. | USA |  |
-| 2026-11-16 | [Senior Software Engineer, Services](https://jobicy.com/jobs/162522-senior-software-engineer-services) | General Software | Rush Street Interactive | Canada |  |
-| 2026-11-16 | [Backend Engineer (Python),AI Engineering: Agent Foundations](https://jobicy.com/jobs/155430-backend-engineer-pythonai-engineering-agent-foundations) | Data & AI | GitLab | Canada,  Poland,  UK |  |
-| 2026-11-16 | [Senior Backend Engineer (Boosters)](https://jobicy.com/jobs/153227-senior-backend-engineer-boosters) | Backend | Playson | Europe |  |
-| 2026-11-16 | [Senior+ Backend Software Engineer - Asia](https://jobicy.com/jobs/153195-senior-backend-software-engineer-asia) | Backend | Palmstreet | China |  |
-| 2026-11-16 | [Senior Software Engineer (Game Engine)](https://jobicy.com/jobs/146058-senior-software-engineer-game-engine) | General Software | Playson | Europe |  |
-| 2026-11-16 | [Ubuntu Linux Kernel Test Engineer](https://jobicy.com/jobs/145995-ubuntu-linux-kernel-test-engineer) | Embedded & Systems | Canonical | APAC,  China |  |
-| 2026-11-16 | [Member of Technical Staff (Robotics)](https://jobicy.com/jobs/153241-member-of-technical-staff-robotics) | General Software | Reka | UK |  |
-| 2026-11-16 | [Senior+ Backend Software Engineer - Canada](https://jobicy.com/jobs/153205-senior-backend-software-engineer-canada) | Backend | Palmstreet | Canada |  |
-| 2026-11-16 | [Senior Integrations Engineer](https://jobicy.com/jobs/149161-senior-integrations-engineer) | Solutions & Integrations | NTT DATA | LATAM |  |
-| 2026-11-16 | [Senior Software Engineer, Backend - Platform Team](https://jobicy.com/jobs/146081-senior-software-engineer-backend-platform-team) | DevOps & Cloud | Cresta | Canada,  USA |  |
-| 2026-11-15 | [Staff Developer Advocate, Enterprise - EMEA](https://jobicy.com/jobs/162481-staff-developer-advocate-enterprise-emea) | Solutions & Integrations | Temporal Technologies | Germany |  |
-| 2026-11-15 | [Senior Full Stack Engineer / Experimentation - Product Analytics / UK / Remote](https://jobicy.com/jobs/162450-senior-full-stack-engineer-experimentation-product-analytics-uk-remote) | Full-stack | Grafana Labs | Germany,  Ireland,  Spain,  Sweden,  UK |  |
-| 2026-11-15 | [Senior Full Stack Engineer / Experimentation - Product Analytics / Sweden / Remote](https://jobicy.com/jobs/162448-senior-full-stack-engineer-experimentation-product-analytics-sweden-remote) | Full-stack | Grafana Labs | Germany,  Ireland,  Spain,  Sweden,  UK |  |
-| 2026-11-15 | [Senior Full Stack Engineer / Experimentation - Product Analytics / Spain / Remote](https://jobicy.com/jobs/162446-senior-full-stack-engineer-experimentation-product-analytics-spain-remote) | Full-stack | Grafana Labs | Germany,  Ireland,  Spain,  Sweden,  UK |  |
-| 2026-11-15 | [Senior Full Stack Engineer / Experimentation - Product Analytics / Ireland / Remote](https://jobicy.com/jobs/162444-senior-full-stack-engineer-experimentation-product-analytics-ireland-remote) | Full-stack | Grafana Labs | Germany,  Ireland,  Spain,  Sweden,  UK |  |
-| 2026-11-15 | [Senior Full Stack Engineer / Experimentation - Product Analytics / Germany / Remote](https://jobicy.com/jobs/162442-senior-full-stack-engineer-experimentation-product-analytics-germany-remote) | Full-stack | Grafana Labs | Germany,  Ireland,  Spain,  Sweden,  UK |  |
-| 2026-11-15 | [Web Automation Test Engineer](https://jobicy.com/jobs/162439-web-automation-test-engineer-2) | QA & Testing | Caylent | Brazil |  |
+| 2026-11-17 | [Senior Software Engineer, Developer Experience](https://jobicy.com/jobs/162755-senior-software-engineer-developer-experience-2) | General Software | Thumbtack | USA |  |
+| 2026-11-17 | [Senior Software Engineer, Builder Studio](https://jobicy.com/jobs/162753-senior-software-engineer-builder-studio) | General Software | Apollo.io | Canada,  USA |  |
+| 2026-11-17 | [Systems Engineer – Nuclear I&C / BWR](https://jobicy.com/jobs/162749-systems-engineer-nuclear-ic-bwr) | General Software | Quest Defense Systems & Solutions, Inc. | USA |  |
+| 2026-11-17 | [Compiler Engineer - Algorithmic Workloads Compilation](https://jobicy.com/jobs/162747-compiler-engineer-algorithmic-workloads-compilation) | General Software | Mythic | Canada,  USA |  |
+| 2026-11-17 | [Sr. Systems Engineer – Flight Management System (FMS)](https://jobicy.com/jobs/162743-sr-systems-engineer-flight-management-system-fms) | General Software | Quest Defense Systems & Solutions, Inc. | USA |  |
+| 2026-11-17 | [Software Verification Engineer](https://jobicy.com/jobs/162734-software-verification-engineer) | General Software | Quest Defense Systems & Solutions, Inc. | USA |  |
+| 2026-11-17 | [AI Algorithms/Software Engineer](https://jobicy.com/jobs/162740-ai-algorithms-software-engineer) | Data & AI | Mythic | USA |  |
+| 2026-11-17 | [AI Engineer - 4 Day Week + Remote](https://jobicy.com/jobs/155579-ai-engineer-4-day-week-remote) | Data & AI | Laminar Projects | Poland,  Portugal |  |
+| 2026-11-17 | [Ads Quality Rater - Hebrew (Israel)](https://jobicy.com/jobs/155611-ads-quality-rater-hebrew-israel) | QA & Testing | Welo Global | Israel |  |
+| 2026-11-17 | [Senior Backend Engineer (Booking Integrations, Contract)](https://jobicy.com/jobs/155600-senior-backend-engineer-booking-integrations-contract) | Solutions & Integrations | Aescape | USA |  |
+| 2026-11-17 | [Engineering Director, EU](https://jobicy.com/jobs/155587-engineering-director-eu) | Engineering Leadership | Monzo | UK |  |
+| 2026-11-17 | [Power Platform Developer](https://jobicy.com/jobs/155575-power-platform-developer) | DevOps & Cloud | Oddball | USA |  |
+| 2026-11-17 | [Chief Technology Officer](https://jobicy.com/jobs/153308-chief-technology-officer-3) | General Software | Toptal | LATAM,  Canada,  Europe |  |
+| 2026-11-17 | [Engineering Manager - EU](https://jobicy.com/jobs/150687-engineering-manager-eu) | Engineering Leadership | Ashby | Europe |  |
+| 2026-11-17 | [Customer Solutions Engineer – Payments](https://jobicy.com/jobs/149199-customer-solutions-engineer-payments) | Solutions & Integrations | Zuora | USA |  |
+| 2026-11-17 | [Software Engineer (Technical Leadership)](https://jobicy.com/jobs/150665-software-engineer-technical-leadership) | General Software | Meta | USA |  |
+| 2026-11-16 | [Senior Software Engineer, Agentic Customer Platform (Poland, Remote, B2B)](https://jobicy.com/jobs/162707-senior-software-engineer-agentic-customer-platform-poland-remote-b2b-2) | DevOps & Cloud | Samsara | Poland |  |
+| 2026-11-16 | [Product Engineer (AI Driven)](https://jobicy.com/jobs/162678-product-engineer-ai-driven) | Data & AI | AE Studio | Brazil |  |
+| 2026-11-16 | [Staff Software Engineer, CKD](https://jobicy.com/jobs/162653-staff-software-engineer-ckd) | General Software | NerdWallet | USA |  |
+| 2026-11-16 | [Senior Software Engineer](https://jobicy.com/jobs/162635-senior-software-engineer-25) | General Software | NerdWallet | USA |  |
 
 ## How it works
 
