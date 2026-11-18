@@ -6,19 +6,19 @@ from the [Remotive](https://remotive.com) and [Jobicy](https://jobicy.com) publi
 
 **Live site:** https://mwangimark.github.io/frontend-job-tracker/ (Angular app in `site/`, redeployed after every update)
 
-**Last updated:** 2026-11-17 · **Jobs tracked:** 275 · **Open to Kenya:** 16 ·
-**New today:** 24 (0 open to Kenya)
+**Last updated:** 2026-11-18 · **Jobs tracked:** 310 · **Open to Kenya:** 18 ·
+**New today:** 35 (2 open to Kenya)
 
-**By role:** General Software: 70 · Data & AI: 42 · Solutions & Integrations: 30 · Full-stack: 28 · Engineering Leadership: 26 · Backend: 24 · DevOps & Cloud: 13 · Embedded & Systems: 13 · Frontend: 12 · QA & Testing: 12 · Mobile: 5
+**By role:** General Software: 78 · Data & AI: 46 · Full-stack: 34 · Solutions & Integrations: 33 · Engineering Leadership: 28 · Backend: 25 · QA & Testing: 19 · DevOps & Cloud: 15 · Frontend: 13 · Embedded & Systems: 13 · Mobile: 6
 
 ## New jobs per day (last 30 days)
 
 ```mermaid
 xychart-beta
-    x-axis ["11-12", "11-13", "11-14", "11-15", "11-16", "11-17"]
+    x-axis ["11-12", "11-13", "11-14", "11-15", "11-16", "11-17", "11-18"]
     y-axis "New jobs" 0 --> 106
-    bar [106, 56, 47, 10, 32, 24]
-    line [7, 7, 1, 1, 0, 0]
+    bar [106, 56, 47, 10, 32, 24, 35]
+    line [7, 7, 1, 1, 0, 0, 2]
 ```
 Bars: all new jobs. Line: new jobs open to Kenya.
 
@@ -26,26 +26,26 @@ Bars: all new jobs. Line: new jobs open to Kenya.
 
 | Published | Job | Role | Company | Location | Open to Kenya |
 |---|---|---|---|---|---|
-| 2026-11-17 | [Senior Software Engineer, Developer Experience](https://jobicy.com/jobs/162755-senior-software-engineer-developer-experience-2) | General Software | Thumbtack | USA |  |
-| 2026-11-17 | [Senior Software Engineer, Builder Studio](https://jobicy.com/jobs/162753-senior-software-engineer-builder-studio) | General Software | Apollo.io | Canada,  USA |  |
-| 2026-11-17 | [Systems Engineer – Nuclear I&C / BWR](https://jobicy.com/jobs/162749-systems-engineer-nuclear-ic-bwr) | General Software | Quest Defense Systems & Solutions, Inc. | USA |  |
-| 2026-11-17 | [Compiler Engineer - Algorithmic Workloads Compilation](https://jobicy.com/jobs/162747-compiler-engineer-algorithmic-workloads-compilation) | General Software | Mythic | Canada,  USA |  |
-| 2026-11-17 | [Sr. Systems Engineer – Flight Management System (FMS)](https://jobicy.com/jobs/162743-sr-systems-engineer-flight-management-system-fms) | General Software | Quest Defense Systems & Solutions, Inc. | USA |  |
-| 2026-11-17 | [Software Verification Engineer](https://jobicy.com/jobs/162734-software-verification-engineer) | General Software | Quest Defense Systems & Solutions, Inc. | USA |  |
-| 2026-11-17 | [AI Algorithms/Software Engineer](https://jobicy.com/jobs/162740-ai-algorithms-software-engineer) | Data & AI | Mythic | USA |  |
-| 2026-11-17 | [AI Engineer - 4 Day Week + Remote](https://jobicy.com/jobs/155579-ai-engineer-4-day-week-remote) | Data & AI | Laminar Projects | Poland,  Portugal |  |
-| 2026-11-17 | [Ads Quality Rater - Hebrew (Israel)](https://jobicy.com/jobs/155611-ads-quality-rater-hebrew-israel) | QA & Testing | Welo Global | Israel |  |
-| 2026-11-17 | [Senior Backend Engineer (Booking Integrations, Contract)](https://jobicy.com/jobs/155600-senior-backend-engineer-booking-integrations-contract) | Solutions & Integrations | Aescape | USA |  |
-| 2026-11-17 | [Engineering Director, EU](https://jobicy.com/jobs/155587-engineering-director-eu) | Engineering Leadership | Monzo | UK |  |
-| 2026-11-17 | [Power Platform Developer](https://jobicy.com/jobs/155575-power-platform-developer) | DevOps & Cloud | Oddball | USA |  |
-| 2026-11-17 | [Chief Technology Officer](https://jobicy.com/jobs/153308-chief-technology-officer-3) | General Software | Toptal | LATAM,  Canada,  Europe |  |
-| 2026-11-17 | [Engineering Manager - EU](https://jobicy.com/jobs/150687-engineering-manager-eu) | Engineering Leadership | Ashby | Europe |  |
-| 2026-11-17 | [Customer Solutions Engineer – Payments](https://jobicy.com/jobs/149199-customer-solutions-engineer-payments) | Solutions & Integrations | Zuora | USA |  |
-| 2026-11-17 | [Software Engineer (Technical Leadership)](https://jobicy.com/jobs/150665-software-engineer-technical-leadership) | General Software | Meta | USA |  |
-| 2026-11-16 | [Senior Software Engineer, Agentic Customer Platform (Poland, Remote, B2B)](https://jobicy.com/jobs/162707-senior-software-engineer-agentic-customer-platform-poland-remote-b2b-2) | DevOps & Cloud | Samsara | Poland |  |
-| 2026-11-16 | [Product Engineer (AI Driven)](https://jobicy.com/jobs/162678-product-engineer-ai-driven) | Data & AI | AE Studio | Brazil |  |
-| 2026-11-16 | [Staff Software Engineer, CKD](https://jobicy.com/jobs/162653-staff-software-engineer-ckd) | General Software | NerdWallet | USA |  |
-| 2026-11-16 | [Senior Software Engineer](https://jobicy.com/jobs/162635-senior-software-engineer-25) | General Software | NerdWallet | USA |  |
+| 2026-11-18 | [Full Stack Developer (Frontend-Focused) - Mexico](https://jobicy.com/jobs/155665-full-stack-developer-frontend-focused-mexico) | Full-stack | Brafton | Mexico |  |
+| 2026-11-18 | [Senior QA Engineer](https://jobicy.com/jobs/155766-senior-qa-engineer-3) | QA & Testing | Airtm | LATAM,  Canada,  USA |  |
+| 2026-11-18 | [Staff Software Engineer - Python, Java / Spring or Go](https://jobicy.com/jobs/155731-staff-software-engineer-python-java-spring-or-go) | Backend | Bloomreach | Europe |  |
+| 2026-11-18 | [Senior Software Engineer, Data Pipeline](https://jobicy.com/jobs/155730-senior-software-engineer-data-pipeline) | Data & AI | Bloomreach | Europe |  |
+| 2026-11-18 | [Machine Learning Engineer (Governance ML Platform)](https://jobicy.com/jobs/155746-machine-learning-engineer-governance-ml-platform) | DevOps & Cloud | EDB | EMEA | ✅ |
+| 2026-11-18 | [Full Stack Software Engineer](https://jobicy.com/jobs/155744-full-stack-software-engineer-2) | Full-stack | BetterHelp | USA |  |
+| 2026-11-18 | [Manager, Engineering (Remote Eligible in Bulgaria)](https://jobicy.com/jobs/155726-manager-engineering-remote-eligible-in-bulgaria) | General Software | Smartsheet | Bulgaria |  |
+| 2026-11-18 | [Ads Quality Rater – German (Austria)](https://jobicy.com/jobs/155692-ads-quality-rater-german-austria) | QA & Testing | Welo Global | Austria |  |
+| 2026-11-18 | [Ads Quality Rater - Slovenian (Slovenia)](https://jobicy.com/jobs/155689-ads-quality-rater-slovenian-slovenia) | QA & Testing | Welo Global | Slovenia |  |
+| 2026-11-18 | [Ads Quality Rater – Język polski (Polska)](https://jobicy.com/jobs/155695-ads-quality-rater-jezyk-polski-polska) | QA & Testing | Welo Global | Poland |  |
+| 2026-11-18 | [Full Stack Developer (Frontend-Focused) - Brazil](https://jobicy.com/jobs/155661-full-stack-developer-frontend-focused-brazil) | Full-stack | Brafton | Brazil |  |
+| 2026-11-18 | [Software Engineer](https://jobicy.com/jobs/155660-software-engineer-12) | General Software | Flex | Brazil |  |
+| 2026-11-18 | [Senior Software Engineer, AI Engineer (Brazil)](https://jobicy.com/jobs/155662-senior-software-engineer-ai-engineer-brazil) | Data & AI | TRM Labs | Brazil |  |
+| 2026-11-18 | [Senior Fullstack Engineer](https://jobicy.com/jobs/155655-senior-fullstack-engineer-3) | Full-stack | Spotify | Sweden,  UK |  |
+| 2026-11-18 | [Ads Quality Rater - Norwegian (Norway)](https://jobicy.com/jobs/155652-ads-quality-rater-norwegian-norway) | QA & Testing | Welo Global | Norway |  |
+| 2026-11-18 | [Ads Quality Rater - Slovak (Slovakia)](https://jobicy.com/jobs/155656-ads-quality-rater-slovak-slovakia) | QA & Testing | Welo Global | Slovakia |  |
+| 2026-11-18 | [Senior C++/iOS Engineer - User Platform](https://jobicy.com/jobs/155651-senior-c-ios-engineer-user-platform) | Mobile | Spotify | Sweden,  UK |  |
+| 2026-11-18 | [Software Engineer II - Poland](https://jobicy.com/jobs/155678-software-engineer-ii-poland) | General Software | Housecall Pro | Poland |  |
+| 2026-11-18 | [Senior QA Automation Engineer - Product (LATAM)](https://jobicy.com/jobs/153469-senior-qa-automation-engineer-product-latam) | QA & Testing | Upgrade | Argentina,  Brazil |  |
+| 2026-11-18 | [Director, AI Platforms](https://jobicy.com/jobs/155632-director-ai-platforms) | Engineering Leadership | Life360 | USA |  |
 
 ## How it works
 
