@@ -6,19 +6,19 @@ from the [Remotive](https://remotive.com) and [Jobicy](https://jobicy.com) publi
 
 **Live site:** https://mwangimark.github.io/frontend-job-tracker/ (Angular app in `site/`, redeployed after every update)
 
-**Last updated:** 2026-11-18 · **Jobs tracked:** 310 · **Open to Kenya:** 18 ·
-**New today:** 35 (2 open to Kenya)
+**Last updated:** 2026-11-19 · **Jobs tracked:** 372 · **Open to Kenya:** 20 ·
+**New today:** 62 (2 open to Kenya)
 
-**By role:** General Software: 78 · Data & AI: 46 · Full-stack: 34 · Solutions & Integrations: 33 · Engineering Leadership: 28 · Backend: 25 · QA & Testing: 19 · DevOps & Cloud: 15 · Frontend: 13 · Embedded & Systems: 13 · Mobile: 6
+**By role:** General Software: 101 · Data & AI: 52 · Full-stack: 42 · Solutions & Integrations: 40 · Backend: 29 · Engineering Leadership: 29 · QA & Testing: 22 · DevOps & Cloud: 16 · Frontend: 14 · Mobile: 14 · Embedded & Systems: 13
 
 ## New jobs per day (last 30 days)
 
 ```mermaid
 xychart-beta
-    x-axis ["11-12", "11-13", "11-14", "11-15", "11-16", "11-17", "11-18"]
+    x-axis ["11-12", "11-13", "11-14", "11-15", "11-16", "11-17", "11-18", "11-19"]
     y-axis "New jobs" 0 --> 106
-    bar [106, 56, 47, 10, 32, 24, 35]
-    line [7, 7, 1, 1, 0, 0, 2]
+    bar [106, 56, 47, 10, 32, 24, 35, 62]
+    line [7, 7, 1, 1, 0, 0, 2, 2]
 ```
 Bars: all new jobs. Line: new jobs open to Kenya.
 
@@ -26,26 +26,26 @@ Bars: all new jobs. Line: new jobs open to Kenya.
 
 | Published | Job | Role | Company | Location | Open to Kenya |
 |---|---|---|---|---|---|
-| 2026-11-18 | [Full Stack Developer (Frontend-Focused) - Mexico](https://jobicy.com/jobs/155665-full-stack-developer-frontend-focused-mexico) | Full-stack | Brafton | Mexico |  |
-| 2026-11-18 | [Senior QA Engineer](https://jobicy.com/jobs/155766-senior-qa-engineer-3) | QA & Testing | Airtm | LATAM,  Canada,  USA |  |
-| 2026-11-18 | [Staff Software Engineer - Python, Java / Spring or Go](https://jobicy.com/jobs/155731-staff-software-engineer-python-java-spring-or-go) | Backend | Bloomreach | Europe |  |
-| 2026-11-18 | [Senior Software Engineer, Data Pipeline](https://jobicy.com/jobs/155730-senior-software-engineer-data-pipeline) | Data & AI | Bloomreach | Europe |  |
-| 2026-11-18 | [Machine Learning Engineer (Governance ML Platform)](https://jobicy.com/jobs/155746-machine-learning-engineer-governance-ml-platform) | DevOps & Cloud | EDB | EMEA | ✅ |
-| 2026-11-18 | [Full Stack Software Engineer](https://jobicy.com/jobs/155744-full-stack-software-engineer-2) | Full-stack | BetterHelp | USA |  |
-| 2026-11-18 | [Manager, Engineering (Remote Eligible in Bulgaria)](https://jobicy.com/jobs/155726-manager-engineering-remote-eligible-in-bulgaria) | General Software | Smartsheet | Bulgaria |  |
-| 2026-11-18 | [Ads Quality Rater – German (Austria)](https://jobicy.com/jobs/155692-ads-quality-rater-german-austria) | QA & Testing | Welo Global | Austria |  |
-| 2026-11-18 | [Ads Quality Rater - Slovenian (Slovenia)](https://jobicy.com/jobs/155689-ads-quality-rater-slovenian-slovenia) | QA & Testing | Welo Global | Slovenia |  |
-| 2026-11-18 | [Ads Quality Rater – Język polski (Polska)](https://jobicy.com/jobs/155695-ads-quality-rater-jezyk-polski-polska) | QA & Testing | Welo Global | Poland |  |
-| 2026-11-18 | [Full Stack Developer (Frontend-Focused) - Brazil](https://jobicy.com/jobs/155661-full-stack-developer-frontend-focused-brazil) | Full-stack | Brafton | Brazil |  |
-| 2026-11-18 | [Software Engineer](https://jobicy.com/jobs/155660-software-engineer-12) | General Software | Flex | Brazil |  |
-| 2026-11-18 | [Senior Software Engineer, AI Engineer (Brazil)](https://jobicy.com/jobs/155662-senior-software-engineer-ai-engineer-brazil) | Data & AI | TRM Labs | Brazil |  |
-| 2026-11-18 | [Senior Fullstack Engineer](https://jobicy.com/jobs/155655-senior-fullstack-engineer-3) | Full-stack | Spotify | Sweden,  UK |  |
-| 2026-11-18 | [Ads Quality Rater - Norwegian (Norway)](https://jobicy.com/jobs/155652-ads-quality-rater-norwegian-norway) | QA & Testing | Welo Global | Norway |  |
-| 2026-11-18 | [Ads Quality Rater - Slovak (Slovakia)](https://jobicy.com/jobs/155656-ads-quality-rater-slovak-slovakia) | QA & Testing | Welo Global | Slovakia |  |
-| 2026-11-18 | [Senior C++/iOS Engineer - User Platform](https://jobicy.com/jobs/155651-senior-c-ios-engineer-user-platform) | Mobile | Spotify | Sweden,  UK |  |
-| 2026-11-18 | [Software Engineer II - Poland](https://jobicy.com/jobs/155678-software-engineer-ii-poland) | General Software | Housecall Pro | Poland |  |
-| 2026-11-18 | [Senior QA Automation Engineer - Product (LATAM)](https://jobicy.com/jobs/153469-senior-qa-automation-engineer-product-latam) | QA & Testing | Upgrade | Argentina,  Brazil |  |
-| 2026-11-18 | [Director, AI Platforms](https://jobicy.com/jobs/155632-director-ai-platforms) | Engineering Leadership | Life360 | USA |  |
+| 2026-11-19 | [iOS Developer - AI Finance Agent](https://jobicy.com/jobs/163264-ios-developer-ai-finance-agent) | Mobile | BJAK | Austria |  |
+| 2026-11-19 | [Backend Software Engineer - AI Finance Agent](https://jobicy.com/jobs/163259-backend-software-engineer-ai-finance-agent) | Data & AI | BJAK | Austria |  |
+| 2026-11-19 | [Forward Deployed Engineer](https://jobicy.com/jobs/163258-forward-deployed-engineer-13) | Solutions & Integrations | Collibra | Australia,  Europe,  USA |  |
+| 2026-11-19 | [1192 - Sr. BIM Software Developer](https://jobicy.com/jobs/163256-1192-sr-bim-software-developer) | General Software | GoFasti | LATAM |  |
+| 2026-11-19 | [Senior Java Developer](https://jobicy.com/jobs/163255-senior-java-developer) | Backend | MKS2 Technologies | USA |  |
+| 2026-11-19 | [Founding Staff Software Engineer • Python/FastAPI](https://jobicy.com/jobs/163249-founding-staff-software-engineer-python-fastapi) | Backend | Neuroscale AI | USA |  |
+| 2026-11-19 | [Mobile Application Developer - AI Finance Agent](https://jobicy.com/jobs/163239-mobile-application-developer-ai-finance-agent) | Mobile | BJAK | Sweden |  |
+| 2026-11-19 | [Android Developer - AI Finance Agent](https://jobicy.com/jobs/163238-android-developer-ai-finance-agent) | Mobile | BJAK | Austria |  |
+| 2026-11-19 | [Applied AI Engineer](https://jobicy.com/jobs/163236-applied-ai-engineer-4) | Data & AI | BJAK | Austria |  |
+| 2026-11-19 | [Android Software Engineer - AI Finance Agent](https://jobicy.com/jobs/163234-android-software-engineer-ai-finance-agent) | Mobile | BJAK | Sweden |  |
+| 2026-11-19 | [SIP Expert](https://jobicy.com/jobs/163233-sip-expert) | General Software | Elevenlabs | Europe |  |
+| 2026-11-19 | [Full Stack Software Engineer - AI Finance Agent](https://jobicy.com/jobs/163230-full-stack-software-engineer-ai-finance-agent) | Full-stack | BJAK | Netherlands |  |
+| 2026-11-19 | [Software Engineer - Agent Team](https://jobicy.com/jobs/163229-software-engineer-agent-team) | General Software | Automox | USA |  |
+| 2026-11-19 | [Go-To-Market Engineer](https://jobicy.com/jobs/163223-go-to-market-engineer) | General Software | Automox | USA |  |
+| 2026-11-19 | [Staff Software Engineer](https://jobicy.com/jobs/163221-staff-software-engineer-16) | General Software | DataGrail | USA |  |
+| 2026-11-19 | [Senior Software Development Engineer in Test (SDET)](https://jobicy.com/jobs/155928-senior-software-development-engineer-in-test-sdet-2) | QA & Testing | Flex | Anywhere | ✅ |
+| 2026-11-19 | [Forward Deployed Engineer - Software Engineer - Argentina](https://jobicy.com/jobs/155937-forward-deployed-engineer-software-engineer-argentina) | Solutions & Integrations | Elevenlabs | Argentina |  |
+| 2026-11-19 | [Full-Stack Engineer (Backend Leaning) - Creative Agents](https://jobicy.com/jobs/155939-full-stack-engineer-backend-leaning-creative-agents) | Full-stack | Elevenlabs | Anywhere | ✅ |
+| 2026-11-19 | [Forward Deployed Engineer - Software Engineer - Mexico](https://jobicy.com/jobs/155938-forward-deployed-engineer-software-engineer-mexico) | Solutions & Integrations | Elevenlabs | Mexico |  |
+| 2026-11-19 | [Developer Experience Engineer](https://jobicy.com/jobs/155936-developer-experience-engineer) | General Software | Elevenlabs | Europe,  USA |  |
 
 ## How it works
 
