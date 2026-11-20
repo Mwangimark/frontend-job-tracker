@@ -6,19 +6,19 @@ from the [Remotive](https://remotive.com) and [Jobicy](https://jobicy.com) publi
 
 **Live site:** https://mwangimark.github.io/frontend-job-tracker/ (Angular app in `site/`, redeployed after every update)
 
-**Last updated:** 2026-11-19 · **Jobs tracked:** 372 · **Open to Kenya:** 20 ·
-**New today:** 62 (2 open to Kenya)
+**Last updated:** 2026-11-20 · **Jobs tracked:** 418 · **Open to Kenya:** 20 ·
+**New today:** 46 (0 open to Kenya)
 
-**By role:** General Software: 101 · Data & AI: 52 · Full-stack: 42 · Solutions & Integrations: 40 · Backend: 29 · Engineering Leadership: 29 · QA & Testing: 22 · DevOps & Cloud: 16 · Frontend: 14 · Mobile: 14 · Embedded & Systems: 13
+**By role:** General Software: 110 · Data & AI: 55 · Full-stack: 44 · Solutions & Integrations: 44 · Backend: 33 · QA & Testing: 33 · Engineering Leadership: 32 · Mobile: 18 · DevOps & Cloud: 17 · Frontend: 17 · Embedded & Systems: 15
 
 ## New jobs per day (last 30 days)
 
 ```mermaid
 xychart-beta
-    x-axis ["11-12", "11-13", "11-14", "11-15", "11-16", "11-17", "11-18", "11-19"]
+    x-axis ["11-12", "11-13", "11-14", "11-15", "11-16", "11-17", "11-18", "11-19", "11-20"]
     y-axis "New jobs" 0 --> 106
-    bar [106, 56, 47, 10, 32, 24, 35, 62]
-    line [7, 7, 1, 1, 0, 0, 2, 2]
+    bar [106, 56, 47, 10, 32, 24, 35, 62, 46]
+    line [7, 7, 1, 1, 0, 0, 2, 2, 0]
 ```
 Bars: all new jobs. Line: new jobs open to Kenya.
 
@@ -26,26 +26,26 @@ Bars: all new jobs. Line: new jobs open to Kenya.
 
 | Published | Job | Role | Company | Location | Open to Kenya |
 |---|---|---|---|---|---|
-| 2026-11-19 | [iOS Developer - AI Finance Agent](https://jobicy.com/jobs/163264-ios-developer-ai-finance-agent) | Mobile | BJAK | Austria |  |
-| 2026-11-19 | [Backend Software Engineer - AI Finance Agent](https://jobicy.com/jobs/163259-backend-software-engineer-ai-finance-agent) | Data & AI | BJAK | Austria |  |
-| 2026-11-19 | [Forward Deployed Engineer](https://jobicy.com/jobs/163258-forward-deployed-engineer-13) | Solutions & Integrations | Collibra | Australia,  Europe,  USA |  |
-| 2026-11-19 | [1192 - Sr. BIM Software Developer](https://jobicy.com/jobs/163256-1192-sr-bim-software-developer) | General Software | GoFasti | LATAM |  |
-| 2026-11-19 | [Senior Java Developer](https://jobicy.com/jobs/163255-senior-java-developer) | Backend | MKS2 Technologies | USA |  |
-| 2026-11-19 | [Founding Staff Software Engineer • Python/FastAPI](https://jobicy.com/jobs/163249-founding-staff-software-engineer-python-fastapi) | Backend | Neuroscale AI | USA |  |
-| 2026-11-19 | [Mobile Application Developer - AI Finance Agent](https://jobicy.com/jobs/163239-mobile-application-developer-ai-finance-agent) | Mobile | BJAK | Sweden |  |
-| 2026-11-19 | [Android Developer - AI Finance Agent](https://jobicy.com/jobs/163238-android-developer-ai-finance-agent) | Mobile | BJAK | Austria |  |
-| 2026-11-19 | [Applied AI Engineer](https://jobicy.com/jobs/163236-applied-ai-engineer-4) | Data & AI | BJAK | Austria |  |
-| 2026-11-19 | [Android Software Engineer - AI Finance Agent](https://jobicy.com/jobs/163234-android-software-engineer-ai-finance-agent) | Mobile | BJAK | Sweden |  |
-| 2026-11-19 | [SIP Expert](https://jobicy.com/jobs/163233-sip-expert) | General Software | Elevenlabs | Europe |  |
-| 2026-11-19 | [Full Stack Software Engineer - AI Finance Agent](https://jobicy.com/jobs/163230-full-stack-software-engineer-ai-finance-agent) | Full-stack | BJAK | Netherlands |  |
-| 2026-11-19 | [Software Engineer - Agent Team](https://jobicy.com/jobs/163229-software-engineer-agent-team) | General Software | Automox | USA |  |
-| 2026-11-19 | [Go-To-Market Engineer](https://jobicy.com/jobs/163223-go-to-market-engineer) | General Software | Automox | USA |  |
-| 2026-11-19 | [Staff Software Engineer](https://jobicy.com/jobs/163221-staff-software-engineer-16) | General Software | DataGrail | USA |  |
-| 2026-11-19 | [Senior Software Development Engineer in Test (SDET)](https://jobicy.com/jobs/155928-senior-software-development-engineer-in-test-sdet-2) | QA & Testing | Flex | Anywhere | ✅ |
-| 2026-11-19 | [Forward Deployed Engineer - Software Engineer - Argentina](https://jobicy.com/jobs/155937-forward-deployed-engineer-software-engineer-argentina) | Solutions & Integrations | Elevenlabs | Argentina |  |
-| 2026-11-19 | [Full-Stack Engineer (Backend Leaning) - Creative Agents](https://jobicy.com/jobs/155939-full-stack-engineer-backend-leaning-creative-agents) | Full-stack | Elevenlabs | Anywhere | ✅ |
-| 2026-11-19 | [Forward Deployed Engineer - Software Engineer - Mexico](https://jobicy.com/jobs/155938-forward-deployed-engineer-software-engineer-mexico) | Solutions & Integrations | Elevenlabs | Mexico |  |
-| 2026-11-19 | [Developer Experience Engineer](https://jobicy.com/jobs/155936-developer-experience-engineer) | General Software | Elevenlabs | Europe,  USA |  |
+| 2026-11-20 | [Android Engineer (APAC Remote)](https://jobicy.com/jobs/163534-android-engineer-apac-remote) | Mobile | Binance | APAC |  |
+| 2026-11-20 | [Backend Engineer (Ruby), AI Engineering: AI Catalog](https://jobicy.com/jobs/163519-backend-engineer-ruby-ai-engineering-ai-catalog) | Data & AI | GitLab | UK |  |
+| 2026-11-20 | [Forward Deployed Engineer](https://jobicy.com/jobs/163496-forward-deployed-engineer-14) | Solutions & Integrations | Fin | USA |  |
+| 2026-11-20 | [Senior AI Engineer](https://jobicy.com/jobs/163488-senior-ai-engineer-11) | Data & AI | Osano | USA |  |
+| 2026-11-20 | [Director, AI Solutions](https://jobicy.com/jobs/163478-director-ai-solutions-2) | Engineering Leadership | Wpromote | USA |  |
+| 2026-11-20 | [Senior Frontend Engineer, Foundations](https://jobicy.com/jobs/163468-senior-frontend-engineer-foundations) | Frontend | NetBox Labs | USA |  |
+| 2026-11-20 | [Crux - Video and Audio QA - German (Germany)](https://jobicy.com/jobs/163459-crux-video-and-audio-qa-german-germany) | QA & Testing | Welo Global | Germany |  |
+| 2026-11-20 | [Android Software Engineer](https://jobicy.com/jobs/163458-android-software-engineer) | Mobile | BJAK | Germany |  |
+| 2026-11-20 | [Staff Software Engineer, OS Integration](https://jobicy.com/jobs/163456-staff-software-engineer-os-integration) | Solutions & Integrations | Mozilla | Germany |  |
+| 2026-11-20 | [iOS Developer](https://jobicy.com/jobs/163455-ios-developer) | Mobile | BJAK | Germany |  |
+| 2026-11-20 | [Android Engineer](https://jobicy.com/jobs/163435-android-engineer-2) | Mobile | Branch | USA |  |
+| 2026-11-20 | [Senior Software Engineer: Assets](https://jobicy.com/jobs/163422-senior-software-engineer-assets) | General Software | Consensys | USA |  |
+| 2026-11-20 | [Adobe Multi-Solution Architect (Firefly / GenStudio / Commerce) - Advertising](https://jobicy.com/jobs/163407-adobe-multi-solution-architect-firefly-genstudio-commerce-advertising) | General Software | Truelogic | Brazil |  |
+| 2026-11-20 | [Senior Software Engineer, Data Platform](https://jobicy.com/jobs/163399-senior-software-engineer-data-platform-2) | DevOps & Cloud | TRM Labs | Brazil |  |
+| 2026-11-20 | [Senior Front-End Engineer (Next.js/React) - Real Estate](https://jobicy.com/jobs/163397-senior-front-end-engineer-next-js-react-real-estate) | Frontend | Truelogic | Mexico |  |
+| 2026-11-20 | [Backend Engineer (Ruby), Plan: Spec-Driven Development](https://jobicy.com/jobs/156080-backend-engineer-ruby-plan-spec-driven-development) | Backend | GitLab | UK |  |
+| 2026-11-20 | [Manager, Engineering - Frontend](https://jobicy.com/jobs/156055-manager-engineering-frontend) | Frontend | Wrapbook | Canada,  USA |  |
+| 2026-11-20 | [Engineering Manager, Knowledge Graph Platform](https://jobicy.com/jobs/156017-engineering-manager-knowledge-graph-platform) | Engineering Leadership | Reddit | Canada,  USA |  |
+| 2026-11-20 | [Senior Electrical Delivery Engineer](https://jobicy.com/jobs/155997-senior-electrical-delivery-engineer) | General Software | Lambda | USA |  |
+| 2026-11-20 | [Staff Software Engineer (Full-stack/Backend)](https://jobicy.com/jobs/155988-staff-software-engineer-full-stack-backend) | Full-stack | hims & hers | USA |  |
 
 ## How it works
 
