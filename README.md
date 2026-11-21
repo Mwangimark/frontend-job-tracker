@@ -6,19 +6,19 @@ from the [Remotive](https://remotive.com) and [Jobicy](https://jobicy.com) publi
 
 **Live site:** https://mwangimark.github.io/frontend-job-tracker/ (Angular app in `site/`, redeployed after every update)
 
-**Last updated:** 2026-11-20 · **Jobs tracked:** 418 · **Open to Kenya:** 20 ·
-**New today:** 46 (0 open to Kenya)
+**Last updated:** 2026-11-21 · **Jobs tracked:** 444 · **Open to Kenya:** 24 ·
+**New today:** 26 (4 open to Kenya)
 
-**By role:** General Software: 110 · Data & AI: 55 · Full-stack: 44 · Solutions & Integrations: 44 · Backend: 33 · QA & Testing: 33 · Engineering Leadership: 32 · Mobile: 18 · DevOps & Cloud: 17 · Frontend: 17 · Embedded & Systems: 15
+**By role:** General Software: 118 · Data & AI: 59 · Full-stack: 45 · Solutions & Integrations: 44 · QA & Testing: 39 · Backend: 36 · Engineering Leadership: 35 · Frontend: 18 · Mobile: 18 · DevOps & Cloud: 17 · Embedded & Systems: 15
 
 ## New jobs per day (last 30 days)
 
 ```mermaid
 xychart-beta
-    x-axis ["11-12", "11-13", "11-14", "11-15", "11-16", "11-17", "11-18", "11-19", "11-20"]
+    x-axis ["11-12", "11-13", "11-14", "11-15", "11-16", "11-17", "11-18", "11-19", "11-20", "11-21"]
     y-axis "New jobs" 0 --> 106
-    bar [106, 56, 47, 10, 32, 24, 35, 62, 46]
-    line [7, 7, 1, 1, 0, 0, 2, 2, 0]
+    bar [106, 56, 47, 10, 32, 24, 35, 62, 46, 26]
+    line [7, 7, 1, 1, 0, 0, 2, 2, 0, 4]
 ```
 Bars: all new jobs. Line: new jobs open to Kenya.
 
@@ -26,26 +26,26 @@ Bars: all new jobs. Line: new jobs open to Kenya.
 
 | Published | Job | Role | Company | Location | Open to Kenya |
 |---|---|---|---|---|---|
-| 2026-11-20 | [Android Engineer (APAC Remote)](https://jobicy.com/jobs/163534-android-engineer-apac-remote) | Mobile | Binance | APAC |  |
-| 2026-11-20 | [Backend Engineer (Ruby), AI Engineering: AI Catalog](https://jobicy.com/jobs/163519-backend-engineer-ruby-ai-engineering-ai-catalog) | Data & AI | GitLab | UK |  |
-| 2026-11-20 | [Forward Deployed Engineer](https://jobicy.com/jobs/163496-forward-deployed-engineer-14) | Solutions & Integrations | Fin | USA |  |
-| 2026-11-20 | [Senior AI Engineer](https://jobicy.com/jobs/163488-senior-ai-engineer-11) | Data & AI | Osano | USA |  |
-| 2026-11-20 | [Director, AI Solutions](https://jobicy.com/jobs/163478-director-ai-solutions-2) | Engineering Leadership | Wpromote | USA |  |
-| 2026-11-20 | [Senior Frontend Engineer, Foundations](https://jobicy.com/jobs/163468-senior-frontend-engineer-foundations) | Frontend | NetBox Labs | USA |  |
-| 2026-11-20 | [Crux - Video and Audio QA - German (Germany)](https://jobicy.com/jobs/163459-crux-video-and-audio-qa-german-germany) | QA & Testing | Welo Global | Germany |  |
-| 2026-11-20 | [Android Software Engineer](https://jobicy.com/jobs/163458-android-software-engineer) | Mobile | BJAK | Germany |  |
-| 2026-11-20 | [Staff Software Engineer, OS Integration](https://jobicy.com/jobs/163456-staff-software-engineer-os-integration) | Solutions & Integrations | Mozilla | Germany |  |
-| 2026-11-20 | [iOS Developer](https://jobicy.com/jobs/163455-ios-developer) | Mobile | BJAK | Germany |  |
-| 2026-11-20 | [Android Engineer](https://jobicy.com/jobs/163435-android-engineer-2) | Mobile | Branch | USA |  |
-| 2026-11-20 | [Senior Software Engineer: Assets](https://jobicy.com/jobs/163422-senior-software-engineer-assets) | General Software | Consensys | USA |  |
-| 2026-11-20 | [Adobe Multi-Solution Architect (Firefly / GenStudio / Commerce) - Advertising](https://jobicy.com/jobs/163407-adobe-multi-solution-architect-firefly-genstudio-commerce-advertising) | General Software | Truelogic | Brazil |  |
-| 2026-11-20 | [Senior Software Engineer, Data Platform](https://jobicy.com/jobs/163399-senior-software-engineer-data-platform-2) | DevOps & Cloud | TRM Labs | Brazil |  |
-| 2026-11-20 | [Senior Front-End Engineer (Next.js/React) - Real Estate](https://jobicy.com/jobs/163397-senior-front-end-engineer-next-js-react-real-estate) | Frontend | Truelogic | Mexico |  |
-| 2026-11-20 | [Backend Engineer (Ruby), Plan: Spec-Driven Development](https://jobicy.com/jobs/156080-backend-engineer-ruby-plan-spec-driven-development) | Backend | GitLab | UK |  |
-| 2026-11-20 | [Manager, Engineering - Frontend](https://jobicy.com/jobs/156055-manager-engineering-frontend) | Frontend | Wrapbook | Canada,  USA |  |
-| 2026-11-20 | [Engineering Manager, Knowledge Graph Platform](https://jobicy.com/jobs/156017-engineering-manager-knowledge-graph-platform) | Engineering Leadership | Reddit | Canada,  USA |  |
-| 2026-11-20 | [Senior Electrical Delivery Engineer](https://jobicy.com/jobs/155997-senior-electrical-delivery-engineer) | General Software | Lambda | USA |  |
-| 2026-11-20 | [Staff Software Engineer (Full-stack/Backend)](https://jobicy.com/jobs/155988-staff-software-engineer-full-stack-backend) | Full-stack | hims & hers | USA |  |
+| 2026-11-21 | [Senior Web Engineer - Subscriptions](https://jobicy.com/jobs/156186-senior-web-engineer-subscriptions) | Frontend | Spotify | EMEA | ✅ |
+| 2026-11-21 | [Engineering Manager](https://jobicy.com/jobs/156122-engineering-manager-10) | Engineering Leadership | Monzo | UK |  |
+| 2026-11-21 | [Contract Staff Software Engineer-Bug Burndown](https://jobicy.com/jobs/156172-contract-staff-software-engineer-bug-burndown) | General Software | Mozilla | Germany |  |
+| 2026-11-21 | [Contract Staff Software Engineer - (Firefox) C++,Storage Encryption](https://jobicy.com/jobs/156176-contract-staff-software-engineer-firefox-cstorage-encryption) | General Software | Mozilla | Canada,  Germany,  UK |  |
+| 2026-11-21 | [Software Engineer (.NET)](https://jobicy.com/jobs/156146-software-engineer-net) | Backend | LastPass | Portugal |  |
+| 2026-11-21 | [Applied AI Engineer](https://jobicy.com/jobs/156098-applied-ai-engineer-2) | Data & AI | Future PLC | USA |  |
+| 2026-11-21 | [Manager, Software Engineering, Operations](https://jobicy.com/jobs/153629-manager-software-engineering-operations) | General Software | Jobber | Canada,  USA |  |
+| 2026-11-21 | [Staff Software Engineer - Market Data](https://jobicy.com/jobs/156140-staff-software-engineer-market-data) | Data & AI | Dune | Europe,  USA |  |
+| 2026-11-21 | [Manager, Machine Learning Engineering](https://jobicy.com/jobs/156097-manager-machine-learning-engineering) | Data & AI | Tala | USA |  |
+| 2026-11-21 | [Finnish Tech Linguistic Tester](https://jobicy.com/jobs/146757-finnish-tech-linguistic-tester) | QA & Testing | Welo Global | Anywhere | ✅ |
+| 2026-11-21 | [Senior UICC/eUICC/eSIM Engineer](https://jobicy.com/jobs/151131-senior-uicc-euicc-esim-engineer) | General Software | emnify | Austria,  Germany,  Poland,  Switzerland |  |
+| 2026-11-21 | [Software Engineer - Secure Container Images](https://jobicy.com/jobs/150994-software-engineer-secure-container-images) | General Software | Canonical | Anywhere | ✅ |
+| 2026-11-21 | [Distributed Systems Testing Software Engineer, Python / Go](https://jobicy.com/jobs/151013-distributed-systems-testing-software-engineer-python-go) | QA & Testing | Canonical | Anywhere | ✅ |
+| 2026-11-21 | [Senior Fullstack Engineer](https://jobicy.com/jobs/151178-senior-fullstack-engineer-2) | Full-stack | Dispatch | USA |  |
+| 2026-11-21 | [Backend Software Engineer](https://jobicy.com/jobs/150975-backend-software-engineer-2) | Backend | Northflank | Europe |  |
+| 2026-11-20 | [AI Experience Engineer (Conversational AI)](https://jobicy.com/jobs/163598-ai-experience-engineer-conversational-ai) | Data & AI | Upgrade | Canada |  |
+| 2026-11-20 | [Alpheratz Project - Valencia (Spain) Translation Quality Rater](https://jobicy.com/jobs/163593-alpheratz-project-valencia-spain-translation-quality-rater) | QA & Testing | Welo Global | Spain |  |
+| 2026-11-20 | [Alpheratz Project - Polish (Poland) Translation Quality Rater](https://jobicy.com/jobs/163591-alpheratz-project-polish-poland-translation-quality-rater) | QA & Testing | Welo Global | Poland |  |
+| 2026-11-20 | [Ads Quality Rater - Lithuanian (Lithuania)](https://jobicy.com/jobs/163588-ads-quality-rater-lithuanian-lithuania-2) | QA & Testing | Welo Global | Lithuania |  |
+| 2026-11-20 | [Software Engineer (Go)](https://jobicy.com/jobs/163586-software-engineer-go-2) | General Software | Paddle | Ireland,  Portugal,  UK |  |
 
 ## How it works
 
