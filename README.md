@@ -6,19 +6,19 @@ from the [Remotive](https://remotive.com) and [Jobicy](https://jobicy.com) publi
 
 **Live site:** https://mwangimark.github.io/frontend-job-tracker/ (Angular app in `site/`, redeployed after every update)
 
-**Last updated:** 2026-11-22 · **Jobs tracked:** 491 · **Open to Kenya:** 26 ·
-**New today:** 47 (2 open to Kenya)
+**Last updated:** 2026-11-23 · **Jobs tracked:** 538 · **Open to Kenya:** 36 ·
+**New today:** 47 (10 open to Kenya)
 
-**By role:** General Software: 133 · Data & AI: 63 · Full-stack: 49 · Solutions & Integrations: 49 · Backend: 41 · QA & Testing: 41 · Engineering Leadership: 40 · Frontend: 21 · Mobile: 21 · DevOps & Cloud: 18 · Embedded & Systems: 15
+**By role:** General Software: 148 · Data & AI: 69 · Solutions & Integrations: 52 · Full-stack: 50 · Engineering Leadership: 48 · Backend: 44 · QA & Testing: 42 · Mobile: 28 · Frontend: 22 · DevOps & Cloud: 20 · Embedded & Systems: 15
 
 ## New jobs per day (last 30 days)
 
 ```mermaid
 xychart-beta
-    x-axis ["11-12", "11-13", "11-14", "11-15", "11-16", "11-17", "11-18", "11-19", "11-20", "11-21", "11-22"]
+    x-axis ["11-12", "11-13", "11-14", "11-15", "11-16", "11-17", "11-18", "11-19", "11-20", "11-21", "11-22", "11-23"]
     y-axis "New jobs" 0 --> 106
-    bar [106, 56, 47, 10, 32, 24, 35, 62, 46, 26, 47]
-    line [7, 7, 1, 1, 0, 0, 2, 2, 0, 4, 2]
+    bar [106, 56, 47, 10, 32, 24, 35, 62, 46, 26, 47, 47]
+    line [7, 7, 1, 1, 0, 0, 2, 2, 0, 4, 2, 10]
 ```
 Bars: all new jobs. Line: new jobs open to Kenya.
 
@@ -26,26 +26,26 @@ Bars: all new jobs. Line: new jobs open to Kenya.
 
 | Published | Job | Role | Company | Location | Open to Kenya |
 |---|---|---|---|---|---|
-| 2026-11-22 | [Crux - Video and Audio QA - French (France)](https://jobicy.com/jobs/163823-crux-video-and-audio-qa-french-france) | QA & Testing | Welo Global | France |  |
-| 2026-11-22 | [Andromeda Delta - Audio Transcription QA Turkish (Turkey)](https://jobicy.com/jobs/163820-andromeda-delta-audio-transcription-qa-turkish-turkey) | QA & Testing | Welo Global | Türkiye |  |
-| 2026-11-22 | [Software Engineer (Remote - Contractor)](https://jobicy.com/jobs/163811-software-engineer-remote-contractor-2) | Engineering Leadership | Masabi | Romania |  |
-| 2026-11-22 | [English to Belarusian Review Lead for UI, Marketing & Product Content](https://jobicy.com/jobs/163798-english-to-belarusian-review-lead-for-ui-marketing-product-content) | General Software | Welo Global | Argentina,  Australia,  Austria,  Belgium,  Brazil,  Bulgaria,  Canada,  China,  Costa Rica,  Croatia,  Czechia,  Denmark,  Finland,  France,  Germany,  Greece,  Hong Kong,  Hungary,  Ireland,  Israel,  Italy,  Japan,  Lithuania,  Malaysia,  Mexico,  Netherlands,  New Zealand,  Norway,  Philippines,  Poland,  Portugal,  Romania,  Singapore,  South Korea,  Spain,  Sweden,  Switzerland,  Thailand,  Türkiye,  UAE,  UK,  USA,  Vietnam |  |
-| 2026-11-22 | [Product Engineering Lead - Andera](https://jobicy.com/jobs/163776-product-engineering-lead-andera) | General Software | Pear VC | USA |  |
-| 2026-11-22 | [Founding Engineer - Abacus](https://jobicy.com/jobs/163772-founding-engineer-abacus) | General Software | Pear VC | USA |  |
-| 2026-11-22 | [Founding Software Engineer - Vimes](https://jobicy.com/jobs/163768-founding-software-engineer-vimes) | General Software | Pear VC | USA |  |
-| 2026-11-22 | [Senior Frontend Engineer - Endless Commerce](https://jobicy.com/jobs/163764-senior-frontend-engineer-endless-commerce) | Frontend | Pear VC | USA |  |
-| 2026-11-22 | [Senior Backend Engineer - Endless Commerce](https://jobicy.com/jobs/163760-senior-backend-engineer-endless-commerce) | Backend | Pear VC | USA |  |
-| 2026-11-22 | [Principal Agentic Engineer, AI Ecosystem](https://jobicy.com/jobs/163759-principal-agentic-engineer-ai-ecosystem) | Data & AI | Life360 | USA |  |
-| 2026-11-22 | [Senior Native Application Engineer](https://jobicy.com/jobs/163739-senior-native-application-engineer) | General Software | FloSports, Inc. | USA |  |
-| 2026-11-22 | [Software Engineer (Engineer III to Principal) - Formal Methods](https://jobicy.com/jobs/156398-software-engineer-engineer-iii-to-principal-formal-methods) | General Software | CertiK | USA |  |
-| 2026-11-22 | [Senior Director, Agentic Engineering](https://jobicy.com/jobs/156460-senior-director-agentic-engineering) | Engineering Leadership | Lightspeed Commerce | USA |  |
-| 2026-11-22 | [Senior Software Engineer (PHP)](https://jobicy.com/jobs/156456-senior-software-engineer-php) | Backend | NFQ | Poland |  |
-| 2026-11-22 | [Research Engineer - Web Crawlers](https://jobicy.com/jobs/156436-research-engineer-web-crawlers) | General Software | Elevenlabs | Bulgaria,  Poland,  UK,  USA |  |
-| 2026-11-22 | [Staff Forward Deployed Engineer](https://jobicy.com/jobs/156425-staff-forward-deployed-engineer) | Solutions & Integrations | hims & hers | USA |  |
-| 2026-11-22 | [Senior Staff Engineer, iOS](https://jobicy.com/jobs/156356-senior-staff-engineer-ios) | Mobile | AlphaSense | UK |  |
-| 2026-11-22 | [Senior Staff Engineer, Android](https://jobicy.com/jobs/156354-senior-staff-engineer-android) | Mobile | AlphaSense | UK |  |
-| 2026-11-22 | [Senior Software Enginner (Full-stack Node + React)](https://jobicy.com/jobs/153741-senior-software-enginner-full-stack-node-react) | Full-stack | Airtm | LATAM |  |
-| 2026-11-22 | [Senior AI/ML Engineer](https://jobicy.com/jobs/156322-senior-ai-ml-engineer) | Data & AI | Limbic | Canada |  |
+| 2026-11-23 | [Principal Software Engineer](https://jobicy.com/jobs/163960-principal-software-engineer-3) | General Software | BJAK | Austria |  |
+| 2026-11-23 | [Lead Software Engineer](https://jobicy.com/jobs/163959-lead-software-engineer-2) | General Software | BJAK | Austria |  |
+| 2026-11-23 | [Mobile Engineer - AI Finance Agent](https://jobicy.com/jobs/163946-mobile-engineer-ai-finance-agent) | Mobile | BJAK | Poland |  |
+| 2026-11-23 | [Staff Software Engineer](https://jobicy.com/jobs/163941-staff-software-engineer-17) | General Software | BJAK | Austria |  |
+| 2026-11-23 | [Mobile Developer - AI Finance Agent](https://jobicy.com/jobs/163933-mobile-developer-ai-finance-agent) | Mobile | BJAK | Sweden |  |
+| 2026-11-23 | [AI Engineer](https://jobicy.com/jobs/163921-ai-engineer-6) | Data & AI | Makai Labs | USA |  |
+| 2026-11-23 | [Software Engineer, Security, Stablecoin](https://jobicy.com/jobs/163919-software-engineer-security-stablecoin-2) | General Software | Ramp | USA |  |
+| 2026-11-23 | [Senior Software Engineer](https://jobicy.com/jobs/163918-senior-software-engineer-29) | General Software | Makai Labs | USA |  |
+| 2026-11-23 | [Staff Engineer - Telematics](https://jobicy.com/jobs/163895-staff-engineer-telematics-2) | General Software | Samsara | UK |  |
+| 2026-11-23 | [Senior Android Engineer](https://jobicy.com/jobs/156680-senior-android-engineer-4) | Mobile | Medium | USA |  |
+| 2026-11-23 | [Engineering Manager, Switchboard](https://jobicy.com/jobs/156660-engineering-manager-switchboard) | Engineering Leadership | GitLab | UK |  |
+| 2026-11-23 | [Mobile Principal Software Engineer](https://jobicy.com/jobs/156651-mobile-principal-software-engineer) | Mobile | dscout | USA |  |
+| 2026-11-23 | [Forward Deployed Engineer](https://jobicy.com/jobs/156602-forward-deployed-engineer-8) | Solutions & Integrations | Banyan Software | Belgium,  Germany,  Netherlands,  UK |  |
+| 2026-11-23 | [Engineering Manager- Ceph & Distributed Storage](https://jobicy.com/jobs/156571-engineering-manager-ceph-distributed-storage-2) | Engineering Leadership | Canonical | EMEA,  LATAM,  Canada,  USA | ✅ |
+| 2026-11-23 | [Senior Manager, Software Engineering - AI](https://jobicy.com/jobs/156593-senior-manager-software-engineering-ai) | Data & AI | NetDocuments | USA |  |
+| 2026-11-23 | [Engineering Director - Commercial Systems](https://jobicy.com/jobs/156570-engineering-director-commercial-systems) | Engineering Leadership | Canonical | EMEA | ✅ |
+| 2026-11-23 | [Engineering Director - Business Data](https://jobicy.com/jobs/156569-engineering-director-business-data) | Engineering Leadership | Canonical | EMEA | ✅ |
+| 2026-11-23 | [Senior Software Engineer, Backend](https://jobicy.com/jobs/156558-senior-software-engineer-backend-4) | Backend | Customer.io | EMEA | ✅ |
+| 2026-11-23 | [Performance Engineer - Benchmarking](https://jobicy.com/jobs/156582-performance-engineer-benchmarking) | General Software | Supabase | Anywhere | ✅ |
+| 2026-11-23 | [Performance Engineer - Performance Analysis & Tuning](https://jobicy.com/jobs/156581-performance-engineer-performance-analysis-tuning) | General Software | Supabase | Anywhere | ✅ |
 
 ## How it works
 
