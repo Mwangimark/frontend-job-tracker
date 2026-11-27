@@ -6,19 +6,19 @@ from the [Remotive](https://remotive.com) and [Jobicy](https://jobicy.com) publi
 
 **Live site:** https://mwangimark.github.io/frontend-job-tracker/ (Angular app in `site/`, redeployed after every update)
 
-**Last updated:** 2026-11-26 · **Jobs tracked:** 654 · **Open to Kenya:** 63 ·
-**New today:** 83 (27 open to Kenya)
+**Last updated:** 2026-11-27 · **Jobs tracked:** 681 · **Open to Kenya:** 65 ·
+**New today:** 27 (2 open to Kenya)
 
-**By role:** General Software: 199 · Data & AI: 82 · Solutions & Integrations: 57 · Full-stack: 55 · Backend: 55 · Engineering Leadership: 52 · QA & Testing: 50 · Mobile: 30 · DevOps & Cloud: 26 · Frontend: 25 · Embedded & Systems: 23
+**By role:** General Software: 205 · Data & AI: 85 · Engineering Leadership: 61 · Full-stack: 60 · Solutions & Integrations: 58 · Backend: 55 · QA & Testing: 52 · Mobile: 31 · DevOps & Cloud: 26 · Frontend: 25 · Embedded & Systems: 23
 
 ## New jobs per day (last 30 days)
 
 ```mermaid
 xychart-beta
-    x-axis ["11-12", "11-13", "11-14", "11-15", "11-16", "11-17", "11-18", "11-19", "11-20", "11-21", "11-22", "11-23", "11-24", "11-26"]
+    x-axis ["11-12", "11-13", "11-14", "11-15", "11-16", "11-17", "11-18", "11-19", "11-20", "11-21", "11-22", "11-23", "11-24", "11-26", "11-27"]
     y-axis "New jobs" 0 --> 106
-    bar [106, 56, 47, 10, 32, 24, 35, 62, 46, 26, 47, 47, 33, 83]
-    line [7, 7, 1, 1, 0, 0, 2, 2, 0, 4, 2, 10, 0, 27]
+    bar [106, 56, 47, 10, 32, 24, 35, 62, 46, 26, 47, 47, 33, 83, 27]
+    line [7, 7, 1, 1, 0, 0, 2, 2, 0, 4, 2, 10, 0, 27, 2]
 ```
 Bars: all new jobs. Line: new jobs open to Kenya.
 
@@ -26,26 +26,26 @@ Bars: all new jobs. Line: new jobs open to Kenya.
 
 | Published | Job | Role | Company | Location | Open to Kenya |
 |---|---|---|---|---|---|
-| 2026-11-26 | [Security Engineer](https://jobicy.com/jobs/164365-security-engineer-4) | General Software | Fever | Spain |  |
-| 2026-11-26 | [Solutions Integration Architect - Workday](https://jobicy.com/jobs/164342-solutions-integration-architect-workday) | Solutions & Integrations | Zip | USA |  |
-| 2026-11-26 | [Staff Software Developer](https://jobicy.com/jobs/164325-staff-software-developer-3) | General Software | Neo Financial | Canada |  |
-| 2026-11-26 | [Backend Engineer - senior hire](https://jobicy.com/jobs/164324-backend-engineer-senior-hire) | Backend | Kovo | USA |  |
-| 2026-11-26 | [Senior Test Software Engineer](https://jobicy.com/jobs/164323-senior-test-software-engineer) | QA & Testing | Focus Consulting LLC | USA |  |
-| 2026-11-26 | [Full Stack Web Engineer (Python & React)](https://jobicy.com/jobs/164320-full-stack-web-engineer-python-react-2) | Full-stack | Oowlish Technology | Argentina,  Brazil,  Mexico |  |
-| 2026-11-26 | [Senior Data Engineer, Datacraft team](https://jobicy.com/jobs/157270-senior-data-engineer-datacraft-team) | Data & AI | Bloomreach | Czechia |  |
-| 2026-11-26 | [Manager, Software Engineering - Developer Experience](https://jobicy.com/jobs/157235-manager-software-engineering-developer-experience) | General Software | ClickUp | USA |  |
-| 2026-11-26 | [Senior Software Engineer II, Applied AI](https://jobicy.com/jobs/157182-senior-software-engineer-ii-applied-ai) | Data & AI | Wrapbook | Canada,  USA |  |
-| 2026-11-26 | [Backend Engineer, Java - Web 3 Wallet](https://jobicy.com/jobs/157144-backend-engineer-java-web-3-wallet) | Backend | Binance | Hong Kong,  Singapore |  |
-| 2026-11-26 | [Machine Learning Engineer, New Grad - Quora](https://jobicy.com/jobs/157108-machine-learning-engineer-new-grad-quora) | Data & AI | Quora | Canada,  USA |  |
-| 2026-11-26 | [Full Stack Software Engineer, New Grad - Quora](https://jobicy.com/jobs/157105-full-stack-software-engineer-new-grad-quora) | Full-stack | Quora | Canada,  USA |  |
-| 2026-11-26 | [Frontend Engineer, Ads](https://jobicy.com/jobs/157086-frontend-engineer-ads) | Frontend | Reddit | USA |  |
-| 2026-11-26 | [Safety Engineer (Backend Leaning)](https://jobicy.com/jobs/157048-safety-engineer-backend-leaning) | Backend | Elevenlabs | Ireland,  Japan,  Poland,  UK,  USA |  |
-| 2026-11-26 | [Systems Architect - APAC](https://jobicy.com/jobs/157045-systems-architect-apac) | General Software | Elevenlabs | Singapore |  |
-| 2026-11-26 | [Software Engineer](https://jobicy.com/jobs/154031-software-engineer-11) | General Software | Capital on Tap | Portugal |  |
-| 2026-11-26 | [Junior Linux Kernel Engineer - Ubuntu](https://jobicy.com/jobs/149520-junior-linux-kernel-engineer-ubuntu) | Embedded & Systems | Canonical | Anywhere | ✅ |
-| 2026-11-26 | [Lead Automation Engineer](https://jobicy.com/jobs/154027-lead-automation-engineer) | General Software | Capital on Tap | Portugal |  |
-| 2026-11-26 | [Sr. Quality Engineer](https://jobicy.com/jobs/153999-sr-quality-engineer) | QA & Testing | CentralReach | USA |  |
-| 2026-11-26 | [Staff Security Architect](https://jobicy.com/jobs/144336-staff-security-architect) | General Software | Kraken | EMEA,  LATAM,  Canada,  Europe | ✅ |
+| 2026-11-27 | [Principal Engineering Manager, AI Care](https://jobicy.com/jobs/164486-principal-engineering-manager-ai-care) | Engineering Leadership | Pair Team | USA |  |
+| 2026-11-27 | [Mobile Engineer](https://jobicy.com/jobs/164485-mobile-engineer-2) | Mobile | Fin | USA |  |
+| 2026-11-27 | [Software Engineer](https://jobicy.com/jobs/164483-software-engineer-15) | General Software | Twilio | Ireland |  |
+| 2026-11-27 | [Freelance Software Tester / Remote (Malaysia)](https://jobicy.com/jobs/164482-freelance-software-tester-remote-malaysia) | QA & Testing | Testlio | Malaysia |  |
+| 2026-11-27 | [Freelance Software Tester / Remote (Argentina)](https://jobicy.com/jobs/164475-freelance-software-tester-remote-argentina) | QA & Testing | Testlio | Argentina |  |
+| 2026-11-27 | [Senior Engineering Manager, Grafana Frontend / Germany / Remote](https://jobicy.com/jobs/157408-senior-engineering-manager-grafana-frontend-germany-remote) | Engineering Leadership | Grafana Labs | Germany |  |
+| 2026-11-27 | [Engineering Manager - Ubuntu Core](https://jobicy.com/jobs/157405-engineering-manager-ubuntu-core) | Engineering Leadership | Canonical | EMEA,  LATAM,  Canada,  USA | ✅ |
+| 2026-11-27 | [Engineering Manager](https://jobicy.com/jobs/157378-engineering-manager-14) | Engineering Leadership | Socket | USA |  |
+| 2026-11-27 | [Engineering Manager](https://jobicy.com/jobs/157337-engineering-manager-13) | Engineering Leadership | Customer.io | LATAM,  Canada,  USA |  |
+| 2026-11-27 | [Staff Software Engineer](https://jobicy.com/jobs/157273-staff-software-engineer-11) | General Software | AudioEye | USA |  |
+| 2026-11-27 | [Staff Engineer, Full Stack (Trust, Safety & Risk)](https://jobicy.com/jobs/154084-staff-engineer-full-stack-trust-safety-risk) | Full-stack | Phantom | EMEA,  LATAM,  Canada,  USA | ✅ |
+| 2026-11-27 | [Engineering Manager - Canada](https://jobicy.com/jobs/151633-engineering-manager-canada) | Engineering Leadership | Ashby | Canada |  |
+| 2026-11-27 | [VP of Engineering](https://jobicy.com/jobs/157288-vp-of-engineering-2) | Engineering Leadership | Oddball | USA |  |
+| 2026-11-27 | [OrioleDB Developer (AMER)](https://jobicy.com/jobs/154087-orioledb-developer-amer) | General Software | Supabase | LATAM,  Canada,  USA |  |
+| 2026-11-27 | [Engineering Manager - UK](https://jobicy.com/jobs/151620-engineering-manager-uk) | Engineering Leadership | Ashby | UK |  |
+| 2026-11-27 | [Senior ML Engineer](https://jobicy.com/jobs/151566-senior-ml-engineer) | Data & AI | Quilter | USA |  |
+| 2026-11-27 | [Engineering Manager - Americas](https://jobicy.com/jobs/151638-engineering-manager-americas) | Engineering Leadership | Ashby | Canada,  USA |  |
+| 2026-11-27 | [Software Engineer (All Levels)](https://jobicy.com/jobs/151601-software-engineer-all-levels) | General Software | Fieldguide | USA |  |
+| 2026-11-27 | [Staff ML Systems Engineer](https://jobicy.com/jobs/151571-staff-ml-systems-engineer) | Data & AI | Quilter | USA |  |
+| 2026-11-26 | [Agent Engineer - US Remote](https://jobicy.com/jobs/164452-agent-engineer-us-remote) | General Software | TRM Labs | USA |  |
 
 ## How it works
 
